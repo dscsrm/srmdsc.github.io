@@ -2578,6 +2578,14 @@
 				.wrapper.style3-alt .icon.major:before {
 					color: #953d75;
 				}
+                
+                .wrapper.style4 .icon.major:before {
+					color: #101d42;
+				}
+
+				.wrapper.style4-alt .icon.major:before {
+					color: #0c1631;
+				}
 
 /* Image */
 
@@ -3267,6 +3275,14 @@
 
 		.wrapper.style3-alt {
 			background-color: #953d75;
+		}
+        
+        .wrapper.style4 {
+			background-color: #101d42;
+		}
+
+		.wrapper.style4-alt {
+			background-color: #0c1631;
 		}
 
 		.wrapper.fullscreen {
