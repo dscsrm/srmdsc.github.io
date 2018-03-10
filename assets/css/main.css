@@ -48,6 +48,25 @@
 		box-sizing: border-box;
 	}
 
+	#two h2{
+	  font-family: 'Montserrat', sans-serif;
+	  text-transform: uppercase;
+	  letter-spacing: 2px;
+	  font-size: 1.5em;
+	  font-weight: 300;
+	  margin-bottom: 30px;
+	}
+	.dsc-img{
+		height:100px;width:100px
+	}
+	#one h2{
+	  font-family: 'Montserrat', sans-serif;
+	  text-transform: uppercase;
+	  letter-spacing: 2px;
+	  font-size: 1.5em;
+	  font-weight: 300;
+	  margin-bottom: 30px;
+	}
 /* Grid */
 
 	.row {
@@ -2578,7 +2597,7 @@
 				.wrapper.style3-alt .icon.major:before {
 					color: #953d75;
 				}
-                
+
                 .wrapper.style4 .icon.major:before {
 					color: #101d42;
 				}
@@ -3276,7 +3295,7 @@
 		.wrapper.style3-alt {
 			background-color: #953d75;
 		}
-        
+
         .wrapper.style4 {
 			background-color: #101d42;
 		}
@@ -3784,7 +3803,7 @@
 			}
 
 			#sidebar nav a:after {
-				
+
 				-moz-transition: max-width 0.2s ease;
 				-webkit-transition: max-width 0.2s ease;
 				-ms-transition: max-width 0.2s ease;
