@@ -32,8 +32,8 @@
 }
 .edge--bottom:after {
   bottom: 0;
-  -webkit-transform: skewY(-1.5deg);
-          transform: skewY(-1.5deg);
+  -webkit-transform: skewY(-2.0deg);
+          transform: skewY(-2.0deg);
   -webkit-transform-origin: 100%;
           transform-origin: 100%;
 }
@@ -101,8 +101,8 @@
 }
 .edge--top--reverse:before {
   top: 0;
-  -webkit-transform: skewY(-1.5deg);
-          transform: skewY(-1.5deg);
+  -webkit-transform: skewY(-2.0deg);
+          transform: skewY(-2.0deg);
   -webkit-transform-origin: 0 0;
           transform-origin: 0 0;
 }
@@ -131,8 +131,8 @@
 }
 .edge--both:after {
   bottom: 0;
-  -webkit-transform: skewY(-1.5deg);
-          transform: skewY(-1.5deg);
+  -webkit-transform: skewY(-2.0deg);
+          transform: skewY(-2.0deg);
   -webkit-transform-origin: 100%;
           transform-origin: 100%;
 }
@@ -154,8 +154,8 @@
 }
 .edge--both--reverse:before {
   top: 0;
-  -webkit-transform: skewY(-1.5deg);
-          transform: skewY(-1.5deg);
+  -webkit-transform: skewY(-2.0deg);
+          transform: skewY(-2.0deg);
   -webkit-transform-origin: 0 0;
           transform-origin: 0 0;
 }
@@ -186,11 +186,14 @@
   background: #ededed;
 }
 
+.-yellow {
+  background: #fbbc05;
+}
 .block {
   color: #fff;
   font-family: 'Roboto', sans-serif;
-  margin: 0 0 200px;
-  padding: 20% 20px;
+  margin: 0 0 100px;
+  padding: 5% 20px;
   text-align: center;
 }
 
@@ -236,7 +239,7 @@ margin-top:50vh;
 
 <body>
  
-
+  <div class="navbar-fixed">
 
   <nav class="green " role="navigation">
     <div class="nav-wrapper container"><a class="hide-on-med-and-down" id="logo-container" href="#" class="brand-logo">Logo</a>
@@ -259,7 +262,7 @@ margin-top:50vh;
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
   </nav>
-
+</div>
 
 
 <div class="block -green edge" style="margin-top:0px;height: 0vh; display: flex;
@@ -275,7 +278,7 @@ margin-top:50vh;
   <p>Developer Student Club | Initiated By Google Developers</p>
 
 <div style="padding-top:30px">
-  <button class="orange waves-effect waves-light btn"><i class="material-icons left">cloud</i>Learn More</button>
+  <button class="orange waves-effect waves-light btn">Learn More</button>
 
 </div>
 
@@ -293,7 +296,7 @@ margin-top:50vh;
       	Developer Student Club (DSC) is a Google Developers program for university students to learn mobile and web development skills. The club will be open to any student, ranging from novice developers who are just starting, to advanced developers who want to further their skills. The club is intended as a space for students to try out new ideas and collaborate to solve mobile and web development problems.
       </div>
 </div>
-      <div class="col s6">  <i style="font-size:40px"  class="material-icons">school</i>
+      <div class="col s6">  <i style="font-size:40px"  class="material-icons">group</i>
       	<br>
       	<h5>What we do?</h5><br>
       		<div class="container" style="text-align: left;font-size:15px  ">
@@ -313,8 +316,16 @@ margin-top:50vh;
 
 
 
+<div class=" block -yellow edge--top--reverse " id="third" style="color:white;height: 400px;text-align: center;padding-top:50px">
+ <h4 style="font-weight: 100">Domains</h4>
+ <div class="row" style="">
+    
+    </div>
 
 
+</div>
+
+<!-- 
 
 <div class="block -blue edge--bottom--reverse">
   <h1>Bottom Angled Edge</h1>
@@ -326,8 +337,25 @@ margin-top:50vh;
 </div>
 
 <div class="block -blue edge--top--reverse">
-  <h1>Top Angled Edge</h1>
-  <p>Reversed</p>
+  	<h1>EVENTS</h1>
+	<div class="carousel carousel-slider center black-text z-depth-3">
+ 	<div class="carousel-item green" href="#one!">
+ 		<h2>Event 1</h2>
+ 		<p class="white-text">EVENT desc</p>
+ 	</div>
+ 	<div class="carousel-item amber white-text" href="#two!">
+		<h2>Event 2</h2>
+		<p class="white-text">EVENT desc</p>
+ 	</div>
+ 	<div class="carousel-item light-green white-text" href="#three!">
+		<h2>Event 3</h2>
+		<p class="white-text">EVENT desc</p>
+ 	</div>
+ 	<div class="carousel-item red white-text" href="#four!">
+		<h2>Event 4</h2>
+		<p class="white-text">EVENT desc</p>
+ 	</div>
+     </div>
 </div>
 
 <div class="block -orange edge--both">
@@ -337,12 +365,20 @@ margin-top:50vh;
 <div class="block -green edge--both--reverse">
   <h1>Top & Bottom Angled Edges</h1>
   <p>Reversed</p>
-</div>    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+</div>   -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 
 <script type="text/javascript">
 $(document).ready(function(){
     $('.sidenav').sidenav();
+    $('.carousel').carousel({dist:0});
+    window.setInterval(function(){$('.carousel').carousel('next')},2000)
   });
+    $('.carousel.carousel-slider').carousel({
+    fullWidth: true,
+    indicators: true
+  });	
 </script>
 </body>
 </html>
