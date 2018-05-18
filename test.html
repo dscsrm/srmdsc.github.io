@@ -236,7 +236,7 @@ margin-top:50vh;
 
 <body>
  
-
+  <div class="navbar-fixed">
 
   <nav class="green " role="navigation">
     <div class="nav-wrapper container"><a class="hide-on-med-and-down" id="logo-container" href="#" class="brand-logo">Logo</a>
@@ -259,7 +259,7 @@ margin-top:50vh;
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
   </nav>
-
+</div>
 
 
 <div class="block -green edge" style="margin-top:0px;height: 0vh; display: flex;
@@ -275,7 +275,7 @@ margin-top:50vh;
   <p>Developer Student Club | Initiated By Google Developers</p>
 
 <div style="padding-top:30px">
-  <button class="orange waves-effect waves-light btn"><i class="material-icons left">cloud</i>Learn More</button>
+  <button class="orange waves-effect waves-light btn">Learn More</button>
 
 </div>
 
@@ -326,8 +326,25 @@ margin-top:50vh;
 </div>
 
 <div class="block -blue edge--top--reverse">
-  <h1>Top Angled Edge</h1>
-  <p>Reversed</p>
+  	<h1>EVENTS</h1>
+	<div class="carousel carousel-slider center black-text z-depth-3">
+ 	<div class="carousel-item green" href="#one!">
+ 		<h2>Event 1</h2>
+ 		<p class="white-text">EVENT desc</p>
+ 	</div>
+ 	<div class="carousel-item amber white-text" href="#two!">
+		<h2>Event 2</h2>
+		<p class="white-text">EVENT desc</p>
+ 	</div>
+ 	<div class="carousel-item light-green white-text" href="#three!">
+		<h2>Event 3</h2>
+		<p class="white-text">EVENT desc</p>
+ 	</div>
+ 	<div class="carousel-item red white-text" href="#four!">
+		<h2>Event 4</h2>
+		<p class="white-text">EVENT desc</p>
+ 	</div>
+     </div>
 </div>
 
 <div class="block -orange edge--both">
@@ -342,7 +359,13 @@ margin-top:50vh;
 <script type="text/javascript">
 $(document).ready(function(){
     $('.sidenav').sidenav();
+    $('.carousel').carousel({dist:0});
+    window.setInterval(function(){$('.carousel').carousel('next')},2000)
   });
+    $('.carousel.carousel-slider').carousel({
+    fullWidth: true,
+    indicators: true
+  });	
 </script>
 </body>
 </html>
