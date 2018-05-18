@@ -1,0 +1,255 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>SRM Developer Students Club - Initiated by Google</title>
+		<meta charset="utf-8"/>
+      <!--links for materialize css and jquery in material folder  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="material/css/materialize.min.css" media="screen,projection"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script type="text/javascript" src="material/js/materialize.min.js"></script>
+    <!--STYLE FOR PAGE  -->
+  <style>
+   .edge--bottom {
+  position: relative;
+  z-index: 1;
+}
+.edge--bottom:after {
+  background: inherit;
+  content: '';
+  display: block;
+  height: 50%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  z-index: -1;
+  -webkit-backface-visibility: hidden;
+}
+.edge--bottom:after {
+  bottom: 0;
+  -webkit-transform: skewY(-1.5deg);
+          transform: skewY(-1.5deg);
+  -webkit-transform-origin: 100%;
+          transform-origin: 100%;
+}
+
+.edge--bottom--reverse {
+  position: relative;
+  z-index: 1;
+}
+.edge--bottom--reverse:after {
+  background: inherit;
+  content: '';
+  display: block;
+  height: 50%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  z-index: -1;
+  -webkit-backface-visibility: hidden;
+}
+.edge--bottom--reverse:after {
+  bottom: 0;
+  -webkit-transform: skewY(1.5deg);
+          transform: skewY(1.5deg);
+  -webkit-transform-origin: 0 100%;
+          transform-origin: 0 100%;
+}
+
+.edge--top {
+  position: relative;
+  z-index: 1;
+}
+.edge--top:before {
+  background: inherit;
+  content: '';
+  display: block;
+  height: 50%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  z-index: -1;
+  -webkit-backface-visibility: hidden;
+}
+.edge--top:before {
+  top: 0;
+  -webkit-transform: skewY(1.5deg);
+          transform: skewY(1.5deg);
+  -webkit-transform-origin: 100% 0;
+          transform-origin: 100% 0;
+}
+
+.edge--top--reverse {
+  position: relative;
+  z-index: 1;
+}
+.edge--top--reverse:before {
+  background: inherit;
+  content: '';
+  display: block;
+  height: 50%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  z-index: -1;
+  -webkit-backface-visibility: hidden;
+}
+.edge--top--reverse:before {
+  top: 0;
+  -webkit-transform: skewY(-1.5deg);
+          transform: skewY(-1.5deg);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+}
+
+.edge--both {
+  position: relative;
+  z-index: 1;
+}
+.edge--both:before, .edge--both:after {
+  background: inherit;
+  content: '';
+  display: block;
+  height: 50%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  z-index: -1;
+  -webkit-backface-visibility: hidden;
+}
+.edge--both:before {
+  top: 0;
+  -webkit-transform: skewY(1.5deg);
+          transform: skewY(1.5deg);
+  -webkit-transform-origin: 100% 0;
+          transform-origin: 100% 0;
+}
+.edge--both:after {
+  bottom: 0;
+  -webkit-transform: skewY(-1.5deg);
+          transform: skewY(-1.5deg);
+  -webkit-transform-origin: 100%;
+          transform-origin: 100%;
+}
+
+.edge--both--reverse {
+  position: relative;
+  z-index: 1;
+}
+.edge--both--reverse:before, .edge--both--reverse:after {
+  background: inherit;
+  content: '';
+  display: block;
+  height: 50%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  z-index: -1;
+  -webkit-backface-visibility: hidden;
+}
+.edge--both--reverse:before {
+  top: 0;
+  -webkit-transform: skewY(-1.5deg);
+          transform: skewY(-1.5deg);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+}
+.edge--both--reverse:after {
+  bottom: 0;
+  -webkit-transform: skewY(1.5deg);
+          transform: skewY(1.5deg);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+}
+
+.-berry {
+  background: #b52b4a;
+}
+
+.-blue {
+  background: #41ade5;
+}
+
+.-orange {
+  background: #de6628;
+}
+
+.-green {
+  background: #5e9b42;
+}
+
+.block {
+  color: #fff;
+  font-family: 'Fira Sans', sans-serif;
+  margin: 0 0 200px;
+  padding: 20% 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: 500;
+}
+
+p {
+  font-size: 20px;
+  font-weight: 300;
+  margin-top: 0.5em;
+}
+ </style>
+
+  </head>
+
+<body>
+  <!--NAV BAR -->
+ <nav>
+ <div class="nav-wrapper green">
+    <a href="#" id="logo_image">LOGO</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><a href="">ABOUT US</a></li>
+      <li><a href="">TEAM</a></li>
+      <li><a href="">WHAT WE DO</a></li>
+      <li><a href="">CONTACT US</a></li>
+    </ul>
+  </div>
+ </nav>
+   <!--END OF NAV BAR -->
+
+  <!--Bottom Angled Edge -->
+<div class="block green edge--bottom">
+
+    <h1>SRM DSC</h1>
+    <p>Developer Students Club | Initiated By Google</p>
+    <button class = "btn waves-effect waves-light  white-text text-darken-3" id="btn">LEARN MORE</button>
+
+
+
+
+</div>
+
+<div class="block -blue edge--bottom--reverse">
+  <h1>Bottom Angled Edge</h1>
+  <p>Reversed</p>
+</div>
+
+<div class="block -berry edge--top">
+  <h1>Top Angled Edge</h1>
+</div>
+
+<div class="block -blue edge--top--reverse">
+  <h1>Top Angled Edge</h1>
+  <p>Reversed</p>
+</div>
+
+<div class="block -orange edge--both">
+  <h1>Top & Bottom Angled Edges</h1>
+</div>
+
+<div class="block -green edge--both--reverse">
+  <h1>Top & Bottom Angled Edges</h1>
+  <p>Reversed</p>
+</div>
+</body>
+</html>
