@@ -2,16 +2,22 @@
 
 <html>
 	<head>
+		    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
 		<title>SRM Developer Students Club - Initiated by Google</title>
 		<meta charset="utf-8"/>
       <!--links for materialize css and jquery in material folder  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <link type="text/css" rel="stylesheet" href="material/css/materialize.min.css" media="screen,projection"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <script type="text/javascript" src="material/js/materialize.min.js"></script>
-    <!--STYLE FOR PAGE  -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+
+<script
+  src="js/jquery.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
   <style>
+  body
+  {
+  	font-family: 'Roboto' !important;
+  }
    .edge--bottom {
   position: relative;
   z-index: 1;
@@ -177,12 +183,12 @@
 }
 
 .-green {
-  background: #5e9b42;
+  background: #4CAF50;
 }
 
 .block {
   color: #fff;
-  font-family: 'Fira Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0 0 200px;
   padding: 20% 20px;
   text-align: center;
@@ -198,36 +204,76 @@ p {
   font-weight: 300;
   margin-top: 0.5em;
 }
+#hero
+{
+font-size: 20px;
+text-align: center;
+height: 92vh;
+
+}
+#heroChild
+{display: flex;
+justify-content: center; /* align horizontal */
+align-items: center; 
+margin-top:50vh;
+}
  </style>
 
   </head>
 
 <body>
-  <!--NAV BAR -->
- <nav>
- <div class="nav-wrapper green">
-    <a href="#" id="logo_image">LOGO</a>
-    <ul id="nav-mobile" class="right hide-on-med-and-down">
-      <li><a href="">ABOUT US</a></li>
-      <li><a href="">TEAM</a></li>
-      <li><a href="">WHAT WE DO</a></li>
-      <li><a href="">CONTACT US</a></li>
-    </ul>
-  </div>
- </nav>
-   <!--END OF NAV BAR -->
-
-  <!--Bottom Angled Edge -->
-<div class="block green edge--bottom">
-
-    <h1>SRM DSC</h1>
-    <p>Developer Students Club | Initiated By Google</p>
-    <button class = "btn waves-effect waves-light  white-text text-darken-3" id="btn">LEARN MORE</button>
+ 
 
 
+  <nav class="green " role="navigation">
+    <div class="nav-wrapper container"><a class="hide-on-med-and-down" id="logo-container" href="#" class="brand-logo">Logo</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">About Us </a></li>
+                <li><a href="#">Domains </a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Team</a></li>
+        <li><a href="#">Contact</a></li>
 
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+ <li><a href="#">About Us </a></li>
+                <li><a href="#">Domains </a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Team</a></li>
+        <li><a href="#">Contact</a></li>
+              </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+
+
+<div class="block -green edge" style="margin-top:0px;height: 100vh; display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;"> 
+  <h1 style="font-size: 50px;font-weight: 100">SRM DSC</h1>
+  <p>Developer Student Club | Initiated By Google Developers</p>
+
+<div style="padding-top:30px">
+  <button class="orange waves-effect waves-light btn"><i class="material-icons left">cloud</i>Learn More</button>
 
 </div>
+
+  <img src="images/hero.png" style="padding-top:65px;" class="responsive-img" width="700px">
+</div>
+
+
+
+
+
+
+
+
+
 
 <div class="block -blue edge--bottom--reverse">
   <h1>Bottom Angled Edge</h1>
@@ -250,6 +296,12 @@ p {
 <div class="block -green edge--both--reverse">
   <h1>Top & Bottom Angled Edges</h1>
   <p>Reversed</p>
-</div>
+</div>    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
+</script>
 </body>
 </html>
