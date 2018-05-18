@@ -14,10 +14,7 @@
   src="js/jquery.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
   <style>
-  body
-  {
-  	font-family: 'Roboto' !important;
-  }
+ 
    .edge--bottom {
   position: relative;
   z-index: 1;
@@ -185,6 +182,9 @@
 .-green {
   background: #4CAF50;
 }
+.-grey {
+  background: #ededed;
+}
 
 .block {
   color: #fff;
@@ -217,6 +217,19 @@ justify-content: center; /* align horizontal */
 align-items: center; 
 margin-top:50vh;
 }
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+ #second
+ {height:700px !important;}
+  
+}
+ body
+  {
+  	font-family: 'Roboto' !important;
+  	width:100% !important;
+    overflow-x: hidden !important;
+  }
  </style>
 
   </head>
@@ -254,7 +267,9 @@ margin-top:50vh;
   justify-content: center;
   align-items: center;
   text-align: center;
-  min-height: 95vh;"> 
+  min-height: 92vh;
+  margin: 0;
+  padding: 0;"> 
   <div style="margin-top:-40px"> 
   <h1 style="font-size: 40px;font-weight: 100">SRM DSC</h1>
   <p>Developer Student Club | Initiated By Google Developers</p>
@@ -268,9 +283,33 @@ margin-top:50vh;
 </div>
 </div>
 
+<div class=" -grey " id="second" style="color:black;height: 400px;text-align: center;padding-top:50px">
+ 
+ <div class="row" style="">
+      <div class="col s6">  <i style="font-size:40px" class="material-icons">school</i>
+      	<br>
+      	<h5>About DSC</h5><br>
+      	<div class="container" style="text-align: left;font-size:15px ">
+      	Developer Student Club (DSC) is a Google Developers program for university students to learn mobile and web development skills. The club will be open to any student, ranging from novice developers who are just starting, to advanced developers who want to further their skills. The club is intended as a space for students to try out new ideas and collaborate to solve mobile and web development problems.
+      </div>
+</div>
+      <div class="col s6">  <i style="font-size:40px"  class="material-icons">school</i>
+      	<br>
+      	<h5>What we do?</h5><br>
+      		<div class="container" style="text-align: left;font-size:15px  ">
+   Google Developer Groups can take many forms - from just a few people getting together to watch some videos, to large gatherings with demos, tech talks, hackathons and conferences. We work on various technical domains and try to make use of Google Technologies to empower the audience around us.
+      </div>
+</div>
+    </div>
 
 
-
+    <div class="row" style="margin-top:-150px">
+      <div class="col s6">
+</div>
+      <div class="col s6">  
+    </div>
+    </div>
+</div>
 
 
 
