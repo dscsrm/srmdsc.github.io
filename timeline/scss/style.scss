@@ -1,0 +1,165 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+article {
+    padding: 4em 0;
+    line-height: 1.4em;
+    background-color: #E8E8E8;
+}
+.timeline {
+    padding-bottom: 3em; // add spacing for pagination
+    h4 {
+        width: 100%;
+        margin: 0;
+        padding: 0.8em 0;
+        font-size: 1.15em;
+        font-weight: normal;
+        text-align: center;
+        text-transform: uppercase;
+    }
+}
+.timeline-carousel {
+    padding: 1.6em 0 0;
+    background-color: rgba(255, 255, 255, 1);
+    border-top: 5px solid #2BB591;
+    border-bottom: 5px solid #2BB591;
+}
+.owl-item {
+    height: 100%;
+    position: relative;
+}
+.owl-item__inner {
+    padding: 0 0.9375em;
+    height: 420px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+.date-wrap {
+    float: left;
+    height: 100%;
+    width: 30%;
+    font-size: 14px;
+    text-align: center;
+    .date {
+        display: inline-block;
+        height: 1.4em;
+        width: 1.6em;
+        padding: 1em;
+        background-color: #fff;
+        border: 3px solid #2BB591;
+        border-radius: 70%;
+        color: #2374B9;
+        font-size: 2.7em;
+        letter-spacing: -1.4px;
+        text-indent: -1.01em;
+        line-height: 0;
+        &:after {
+            content: '';
+            position: absolute;
+            top: 2.1em;
+            bottom: 0;
+            left: 18%;
+            z-index: 0;
+            border-left: 3px solid #2BB591;
+        }
+    }
+}
+.text-wrap {
+    float: left;
+    width: 70%;
+    padding: 1.9em 0.9em 5em;
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        list-style-type: none;
+    }
+}
+/*------------------------------------*\
+    ::  Owl Specific Styles
+\*------------------------------------*/  
+.owl-buttons {
+    width: 100%;
+    position: absolute;
+    top: -2.35em;
+    overflow: hidden;
+    .owl-prev, .owl-next {
+        width: 0; 
+	    height: 0; 
+    }
+    .owl-prev {
+        float: left;
+        margin-left: 38%;
+        text-indent: 9999px;
+        border-top: 6px solid transparent;
+	    border-bottom: 6px solid transparent; 
+	    border-right: 11px solid #2273BA;
+        @media (max-width: 1024px) {
+          margin-left: 35%;
+        }
+        @media (max-width: 850px) {
+          margin-left: 30%;
+        }
+        @media (max-width: 640px) {
+          margin-left: 25%;
+        }
+        @media (max-width: 500px) {
+          margin-left: 15%;
+        }
+        @media (max-width: 400px) {
+          margin-left: 10%;
+        }
+    }
+    .owl-next {
+        float: right;
+        margin-right: 38%;
+        text-indent: -9999px;
+	    border-top: 6px solid transparent;
+	    border-bottom: 6px solid transparent;
+	    border-left: 11px solid #2273BA;
+        @media (max-width: 1024px) {
+          margin-right: 35%;
+        }
+        @media (max-width: 850px) {
+          margin-right: 30%;
+        }
+        @media (max-width: 640px) {
+          margin-right: 25%;
+        }
+        @media (max-width: 500px) {
+          margin-right: 15%;
+        }
+        @media (max-width: 400px) {
+          margin-right: 10%;
+        }
+    }
+}
+.owl-pagination {
+    width: 100%;
+    position: absolute;
+    bottom: -2.7em;
+    text-align: center;
+    @media (max-width: 640px) {
+      display: none;
+    }
+    .owl-page {
+        display: inline-block;
+        margin: 0 10px;
+        span {
+            display: block;
+            height: 0.95em;
+            width: 0.95em;
+            box-shadow: inset 0px 0px 0px 2px #2BB591; //used box-shadow instead of border, chrome painting bug
+            border-radius: 50%;
+            background-color: #fff;
+            transition: background-color 300ms; 
+        }
+        &:hover, &.active {
+            span {
+                background-color: #2BB591;
+            }
+        }
+    }
+}
