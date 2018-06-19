@@ -358,19 +358,19 @@ body
 	<a class="hide-on-med-and-down" id="logo-container" href="http://srmuniv.ac.in" target="_blank" class="brand-logo">
     	<img src="images/dsc3.png" width=55px height=60px style="padding-top:5px"></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#aboutus">About Us </a></li>
-        <li><a href="#domains">Domains </a></li>
-        <li><a href="#events">Events</a></li>
-        <li><a href="#">Team</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a class="menu1" href="#aboutus">About Us </a></li>
+        <li><a class="menu2" href="#domains">Domains </a></li>
+        <li><a class="menu3" href="#events">Events</a></li>
+        <li><a  href="#">Team</a></li>
+        <li><a class="menu4" href="#contact">Contact</a></li>
       </ul>
   
       <ul id="nav-mobile" style="position: fixed" class="sidenav">
-      <li><a href="#aboutus">About Us </a></li>
-      <li><a href="#domains">Domains </a></li>
-      <li><a href="#events">Events</a></li>
+      <li><a class="menu1" href="#aboutus">About Us </a></li>
+      <li><a class="menu2" href="#domains">Domains </a></li>
+      <li><a class="menu3" href="#events">Events</a></li>
       <li><a href="#">Team</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a class="menu4" href="#contact">Contact</a></li>
      </ul>
 	<a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
    </div>
@@ -393,7 +393,7 @@ body
   <p>Developer Student Club | Initiated By Google Developers</p>
 
 <div style="padding-top:30px">
-  <a href="#second" ><button class="orange waves-effect waves-light btn">Learn More</button></a>
+  <a href="#aboutus" id="learnmore"><button  class="orange waves-effect waves-light btn">Learn More</button></a>
 
 </div>
 
@@ -567,12 +567,63 @@ body
 	
 	
 <script type="text/javascript">
-$(document).ready(function(){
+$('#learnmore').click(function(){
+    $('html, body').animate({
+        scrollTop: $( $(this).attr('href') ).offset().top
+    }, 1000);
+    return false;
+});
+
+
+
+    $('.menu1').click(function(){
+    $('html, body').animate({
+        scrollTop: $( $(this).attr('href') ).offset().top
+    }, 1000);
+    return false;
+});
+
+
+
+    $('.menu2').click(function(){
+    $('html, body').animate({
+        scrollTop: $( $(this).attr('href') ).offset().top
+    }, 1000);
+    return false;
+});
+
+
+    $('.menu3').click(function(){
+    $('html, body').animate({
+        scrollTop: $( $(this).attr('href') ).offset().top
+    }, 1000);
+    return false;
+});
+
+
+    $('.menu4').click(function(){
+    $('html, body').animate({
+        scrollTop: $( $(this).attr('href') ).offset().top
+    }, 1000);
+    return false;
+});
+
+
+  $(document).ready(function(){
     $('.sidenav').sidenav();
   });
-   
- 
-        
+</script>
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+<script>
+  var config = {
+    apiKey: "AIzaSyCQYNLYmC_WHmrv7l3xphPsvetgNSEwj4o",
+    authDomain: "dscwebsite-23007.firebaseapp.com",
+    databaseURL: "https://dscwebsite-23007.firebaseio.com",
+    projectId: "dscwebsite-23007",
+    storageBucket: "dscwebsite-23007.appspot.com",
+    messagingSenderId: "83775788121"
+  };
+  firebase.initializeApp(config);
 </script>
 <script type="text/javascript">
 
