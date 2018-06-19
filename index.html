@@ -22,6 +22,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+<script type="text/javascript" src="js/materialPreloader.js"></script>
+<link rel="stylesheet" type="text/css" href="css/materialPreloader.css">
 
 
               <style>
@@ -474,6 +476,21 @@ $(document).ready(function(){
    
  
         
+</script>
+<script type="text/javascript">
+
+ preloader = new $.materialPreloader({
+        position: '50vh',
+         height: '5px',
+        col_1: '#159756',
+        col_2: '#da4733',
+        col_3: '#3b78e7',
+        col_4: '#fdba2c',
+        fadeIn: 200,
+        fadeOut: 200
+    });
+  preloader.on();
+
 </script>
 </body>
 </html>
