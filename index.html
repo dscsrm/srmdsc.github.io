@@ -245,13 +245,100 @@ color:#2b2b2b !important;
 {
   color:#FF9800;
 }
+.md-preloader {
+  font-size: 0;
+  display: inline-block;
+  -webkit-animation: outer 6600ms linear infinite;
+          animation: outer 6600ms linear infinite;
+}
+.md-preloader svg {
+  -webkit-animation: inner 1320ms linear infinite;
+          animation: inner 1320ms linear infinite;
+}
+.md-preloader svg circle {
+  fill: none;
+  stroke: #34A853;
+  stroke-linecap: square;
+  -webkit-animation: arc 1320ms cubic-bezier(0.8, 0, 0.4, 0.8) infinite;
+          animation: arc 1320ms cubic-bezier(0.8, 0, 0.4, 0.8) infinite;
+}
+@-webkit-keyframes outer {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes outer {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes inner {
+  0% {
+    -webkit-transform: rotate(-100.8deg);
+            transform: rotate(-100.8deg);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+@keyframes inner {
+  0% {
+    -webkit-transform: rotate(-100.8deg);
+            transform: rotate(-100.8deg);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+@-webkit-keyframes arc {
+  0% {
+    stroke-dasharray: 1 210.48670779px;
+    stroke-dashoffset: 0;
+  }
+  40% {
+    stroke-dasharray: 151.55042961px, 210.48670779px;
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dasharray: 1 210.48670779px;
+    stroke-dashoffset: -151.55042961px;
+  }
+}
+@keyframes arc {
+  0% {
+    stroke-dasharray: 1 210.48670779px;
+    stroke-dashoffset: 0;
+  }
+  40% {
+    stroke-dasharray: 151.55042961px, 210.48670779px;
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dasharray: 1 210.48670779px;
+    stroke-dashoffset: -151.55042961px;
+  }
+}
 
  </style>
 
   </head>
 
 <body>
- 
+
+ <div id="loader"  style="width: 100%;height: 100%;background-color:#d3d3d3;z-index: 9999;position: fixed;text-align: center;padding-top:40vh;" ><div class="md-preloader"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="75" width="75" viewbox="0 0 75 75"><circle cx="37.5" cy="37.5" r="33.5" stroke-width="8"/></svg></div> 
+</div>
   <div class="navbar-fixed" > 
 
   <nav style="background: #4285F4" role="navigation">
@@ -278,6 +365,7 @@ color:#2b2b2b !important;
 </nav>	 	    
    
 </div>
+
 
 
 <div class="block -green edge" style="margin-top:0px;height: 0vh; display: flex;
@@ -490,7 +578,11 @@ $(document).ready(function(){
         fadeOut: 200
     });
   preloader.on();
-
+$(document).ready(function() {
+window.onload = function () {
+$('#loader').fadeOut(500, function(){ $('#loader').remove(); } );
+}
+});
 </script>
 </body>
 </html>
