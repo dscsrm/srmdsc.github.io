@@ -358,7 +358,7 @@ body
 	<a class="hide-on-med-and-down" id="logo-container" href="http://srmuniv.ac.in" target="_blank" class="brand-logo">
     	<img src="images/dsc3.png" width=55px height=60px style="padding-top:5px"></a>
       <ul class="right hide-on-med-and-down">
-        <li><a class="menu1" href="#aboutus">About Us </a></li>
+        <li><a class="menu1"  href="#aboutus">About Us </a></li>
         <li><a class="menu2" href="#domains">Domains </a></li>
         <li><a class="menu3" href="#events">Events</a></li>
         <li><a  href="#">Team</a></li>
@@ -558,8 +558,7 @@ body
 	
   </div>
 	
-	
-	
+
 	
 	
 	
@@ -602,6 +601,8 @@ $('#learnmore').click(function(){
 
 
     $('.menu4').click(function(){
+
+
     $('html, body').animate({
         scrollTop: $( $(this).attr('href') ).offset().top
     }, 1000);
@@ -610,7 +611,7 @@ $('#learnmore').click(function(){
 
 
   $(document).ready(function(){
-    $('.sidenav').sidenav();
+    $('.sidenav').sidenav({closeOnClick:true});
   });
 </script>
 <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
