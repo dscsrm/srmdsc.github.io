@@ -11,7 +11,8 @@
                 <link rel="icon" href="images/dsc3.png">
       <!--links for materialize css and jquery in material folder  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400" rel="stylesheet">
 
 
 
@@ -22,8 +23,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-<script type="text/javascript" src="js/materialPreloader.js"></script>
-<link rel="stylesheet" type="text/css" href="css/materialPreloader.css">
+<script type="text/javascript" src="js/materialPreloader.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/materialPreloader.min.css">
 
 
               <style>
@@ -193,7 +194,7 @@
 {background: #fbbc05;}
 .block {
   color: #fff;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   margin: 0 0 100px;
   padding: 5% 20px;
   text-align: center;
@@ -227,7 +228,7 @@ margin-top:50vh;
 }
  body
   {
-  	font-family: 'Roboto' !important;
+  	font-family: 'Montserrat' !important;
   	width:100% !important;
     overflow-x: hidden !important;
   }
@@ -330,7 +331,17 @@ color:#2b2b2b !important;
     stroke-dashoffset: -151.55042961px;
   }
 }
+.main
+{
+      overflow-x: hidden !important; 
+padding:0px  !important;
+margin: 0px  !important;
+}
+body
+{
+  font-family: 'Montserrat', sans-serif !important;
 
+}
  </style>
 
   </head>
@@ -339,6 +350,7 @@ color:#2b2b2b !important;
 
  <div id="loader"  style="width: 100%;height: 100%;background-color:#d3d3d3;z-index: 9999;position: fixed;text-align: center;padding-top:40vh;" ><div class="md-preloader"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="75" width="75" viewbox="0 0 75 75"><circle cx="37.5" cy="37.5" r="33.5" stroke-width="8"/></svg></div> 
 </div>
+<div class="main">
   <div class="navbar-fixed" > 
 
   <nav style="background: #4285F4" role="navigation">
@@ -457,8 +469,8 @@ color:#2b2b2b !important;
 
 
 <div class=" --both " id="events" style="margin-bottom: 0;">
-<iframe  frameBorder="0" src="timeline/index.html" style="overflow:hidden; @media (max-width: 850px) {margin-right: 20%;
-}}" width="100%"; height="900px" ">
+<iframe  scrolling="no" frameBorder="0" src="timeline/index.html" style="overflow:hidden; @media (max-width: 850px) {margin-right: 20%;
+}}" width="100%"; height="980px" ">
 </iframe>
 </div>
 
@@ -539,11 +551,12 @@ color:#2b2b2b !important;
           </div>
           <div class="footer-copyright">
             <div class="container">
-            © SRM DSC 2018
+            © SRM Developer Student Club 2018 - Initiated by <a href="https://developers.google.com/training/programs/india/" style="color:#34A853"> Google Developers</a>
             </div>
           </div>
         </footer>	
 	
+  </div>
 	
 	
 	
