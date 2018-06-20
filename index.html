@@ -22,66 +22,7 @@
 <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-firestore.js"></script>
 
-<script>
-  var config = {
-    apiKey: "AIzaSyCQYNLYmC_WHmrv7l3xphPsvetgNSEwj4o",
-    authDomain: "dscwebsite-23007.firebaseapp.com",
-    databaseURL: "https://dscwebsite-23007.firebaseio.com",
-    projectId: "dscwebsite-23007",
-    storageBucket: "dscwebsite-23007.appspot.com",
-    messagingSenderId: "83775788121"
-  };
-	firebase.initializeApp(config);
-	var firestore=firebase.firestore();
 
-
-//	var contactRef = firestore.collection("contact");
-$(document).ready(function(){
-	$("#submit").click(function(){
-		var name=$("#name").val();
-		var phone=$("#phone").val();
-		var email=$("#email").val();
-		var message=$("#message").val();
-    console.log("saving "+name+" "+email+" "+phone+" "+message);
-		firestore.collection("contact").doc(email).set({
-			name: name,
- 			phone: phone,
- 			email: email,
- 			message:message
-	})
-	.then(function() {
-	   alert("Thank You! Your message was sent successfully!");
-	       $("#myform")[0].reset();
-
-
-
-	})
-	.catch(function(error) {
-	    console.error("Error writing document: ", error);
-	});
-	/*	contactRef.doc(name).set({
-			name: name,
-			phone: phone,
-			email: email,
-			message: message
-		}).then(function() {
-		    console.log("Document successfully written!");
-		})
-		.catch(function(error) {
-		    console.log("Error writing document: ", error);
-		});*/
-
-	});
-	});
-
-$(document).ready(function () {
-  // Listen to submit event on the <form> itself!
-  $('#myform').submit(function (e) {
-
-    e.preventDefault();
-});
-});
-</script>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
@@ -709,17 +650,65 @@ $('#loader').fadeOut(500, function(){ $('#loader').remove(); } );
 }
 });
 </script>
-<script type="text/javascript">
+<script>
+  var config = {
+    apiKey: "AIzaSyCQYNLYmC_WHmrv7l3xphPsvetgNSEwj4o",
+    authDomain: "dscwebsite-23007.firebaseapp.com",
+    databaseURL: "https://dscwebsite-23007.firebaseio.com",
+    projectId: "dscwebsite-23007",
+    storageBucket: "dscwebsite-23007.appspot.com",
+    messagingSenderId: "83775788121"
+  };
+	firebase.initializeApp(config);
+	var firestore=firebase.firestore();
 
 
-  $('input').on('blur', function() {
-    if ($("#form").valid()) {
-        $('#submit').prop('disabled', false);  
-    } else {
-        $('#submit').prop('disabled', 'disabled');
-    }
+//	var contactRef = firestore.collection("contact");
+$(document).ready(function(){
+	$("#submit").click(function(){
+		$("#submit").prop('disabled', true);
+
+
+		var name=$("#name").val();
+		var phone=$("#phone").val();
+		var email=$("#email").val();
+		var message=$("#message").val();
+    console.log("saving "+name+" "+email+" "+phone+" "+message);
+		firestore.collection("contact").doc(email).set({
+			name: name,
+ 			phone: phone,
+ 			email: email,
+ 			message:message
+	})
+	.then(function() {
+	   alert("Thank You! Your message was sent successfully!");
+	       $("#myform")[0].reset();
+$("#submit").prop('disabled', false)
+
+
+
+
+	})
+	.catch(function(error) {
+	    alert("Error! Please try again." );
+	    $("#submit").prop('disabled', true);
+
+
+	});
+
+
+	});
+	});
+
+$(document).ready(function () {
+  // Listen to submit event on the <form> itself!
+  $('#myform').submit(function (e) {
+
+    e.preventDefault();
+});
 });
 </script>
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121065692-1"></script>
 <script>
