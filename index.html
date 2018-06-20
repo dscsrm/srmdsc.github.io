@@ -43,7 +43,7 @@ $(document).ready(function(){
 		var email=$("#email").val();
 		var message=$("#message").val();
     console.log("saving "+name+" "+email+" "+phone+" "+message);
-		firestore.collection("contact").doc(name).set({
+		firestore.collection("contact").doc(email).set({
 			name: name,
  			phone: phone,
  			email: email,
