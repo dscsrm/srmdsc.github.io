@@ -50,8 +50,10 @@ $(document).ready(function(){
  			message:message
 	})
 	.then(function() {
-	    console.log("Document successfully written!");
-	        $(this).closest('form').find("input, textarea").val("");
+	   alert("Thank You! Your message was sent successfully!");
+	       $("#myform")[0].reset();
+
+
 
 	})
 	.catch(function(error) {
@@ -71,6 +73,14 @@ $(document).ready(function(){
 
 	});
 	});
+
+$(document).ready(function () {
+  // Listen to submit event on the <form> itself!
+  $('#myform').submit(function (e) {
+
+    e.preventDefault();
+});
+});
 </script>
 
 
@@ -700,7 +710,7 @@ $('#loader').fadeOut(500, function(){ $('#loader').remove(); } );
 });
 </script>
 <script type="text/javascript">
-	
+
 
   $('input').on('blur', function() {
     if ($("#form").valid()) {
