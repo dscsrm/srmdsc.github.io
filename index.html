@@ -16,21 +16,21 @@
 
 <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
 <script
-  src="https://code.jquery.com/jquery-3.3.1.js"
-  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
 <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-firestore.js"></script>
+
 <script>
-	// Initialize Firebase
-	var config = {
-		apiKey: "AIzaSyBPha7KVxTvJNqdAEdAv71p0Lf4fIy6mS4",
-		authDomain: "srm-dsc-website.firebaseapp.com",
-		databaseURL: "https://srm-dsc-website.firebaseio.com",
-		projectId: "srm-dsc-website",
-		storageBucket: "srm-dsc-website.appspot.com",
-		messagingSenderId: "525067348702"
-	};
+  var config = {
+    apiKey: "AIzaSyCQYNLYmC_WHmrv7l3xphPsvetgNSEwj4o",
+    authDomain: "dscwebsite-23007.firebaseapp.com",
+    databaseURL: "https://dscwebsite-23007.firebaseio.com",
+    projectId: "dscwebsite-23007",
+    storageBucket: "dscwebsite-23007.appspot.com",
+    messagingSenderId: "83775788121"
+  };
 	firebase.initializeApp(config);
 	var firestore=firebase.firestore();
 
@@ -51,6 +51,8 @@ $(document).ready(function(){
 	})
 	.then(function() {
 	    console.log("Document successfully written!");
+	        $(this).closest('form').find("input, textarea").val("");
+
 	})
 	.catch(function(error) {
 	    console.error("Error writing document: ", error);
@@ -527,8 +529,12 @@ body
 </div>
 
 
+
 <div class="block -orange " id="contact" style="margin-bottom: 0;">
+
  <div class="row">
+ 	<form id="myform"> 
+
 	<div class="col s12 m7">
 		<div class="card">
 		<div class="card-content" id="contact">
@@ -536,34 +542,35 @@ body
       <div class="row">
         <div class="input-field col m6 s12">
           <i class="material-icons prefix active">account_circle</i>
-          <input id="name" type="text" class="validate">
+          <input id="name" type="text" required class="validate">
           <label for="name">Name</label>
         </div>
         <div class="input-field col m6 s12">
           <i class="material-icons prefix active">phone</i>
-          <input id="phone" type="tel" class="validate">
+          <input id="phone" type="number"  required class="validate">
           <label for="phone">Phone</label>
         </div>
 				<div class="input-field  col m8 s12">
 				   <i class="material-icons prefix active">mail</i>
-				   <input id="email" type="email" class="validate">
+				   <input id="email" type="email" required class="validate">
 			     <label for="email">Email</label>
 				</div>
 				<div class="input-field col m6 s12">
           <i class="material-icons prefix active">mode_edit</i>
-					<textarea id="message" class="materialize-textarea"></textarea>
+					<textarea id="message" required class="materialize-textarea"></textarea>
           <label for="message">Message</label>
         </div>
 
        </div>
      </div>
 	  <div class="card-action">
- 	     <button id="submit" class="btn waves-effect orange waves-light" >Submit
+ 	     <button id="submit"  type="submit" class="btn waves-effect orange waves-light" >Submit
  	       <i class="material-icons right" style="color:white">send</i>
  	      </button>
  	  </div>
      </div>
   </div>
+</form>
    <div class="offset-m1 col m4 s12">
       <a class="twitter-timeline" data-chrome=“nofooter transparent” data-lang="en" data-height="440" data-dnt="true" data-theme="light" href="https://twitter.com/DSC_SRM?ref_src=twsrc%5Etfw">Tweets by DSC_SRM</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   </div>
@@ -667,9 +674,10 @@ $('#learnmore').click(function(){
 });
 
 
-  $(document).ready(function(){
+	 $(document).ready(function(){
     $('.sidenav').sidenav({closeOnClick:true});
   });
+ 
 </script>
 
 <script type="text/javascript">
@@ -689,6 +697,17 @@ $(document).ready(function() {
 window.onload = function () {
 $('#loader').fadeOut(500, function(){ $('#loader').remove(); } );
 }
+});
+</script>
+<script type="text/javascript">
+	
+
+  $('input').on('blur', function() {
+    if ($("#form").valid()) {
+        $('#submit').prop('disabled', false);  
+    } else {
+        $('#submit').prop('disabled', 'disabled');
+    }
 });
 </script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
