@@ -1,4 +1,5 @@
 jQuery(document).ready(function($) {
+
     preloader = new $.materialPreloader({
         position: 'top',
         height: '5px',
@@ -18,4 +19,7 @@ jQuery(document).ready(function($) {
         event.preventDefault();
         preloader.off();
     });
+
+
+  
 });

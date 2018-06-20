@@ -77,7 +77,7 @@ var PRESTimeline = /** @class */ (function () {
         if ($(this.activeCard).next().length != 0) {
             $(this.activeCard).next().addClass('next');
         }
-        // ## timeline 
+        // ## timeline
         $(this.base).find('.timeline li.active').removeClass('active');
         // let findNode = $(this.base).find('.timeline ol li')[this.activeCard.index]
         $(this.timelineData[this.activeCard.index]).addClass('active');
@@ -266,5 +266,5 @@ $(document).ready(function () {
         'period3': '#32ccf4'
     };
     var timeline = new PRESTimeline($('#this-timeline'), colorcode);
-	periodNext.click();
+	//periodNext.click();
 });
