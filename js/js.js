@@ -19,16 +19,3 @@ jQuery(document).ready(function($) {
         preloader.off();
     });
 });
-<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyCQYNLYmC_WHmrv7l3xphPsvetgNSEwj4o",
-    authDomain: "dscwebsite-23007.firebaseapp.com",
-    databaseURL: "https://dscwebsite-23007.firebaseio.com",
-    projectId: "dscwebsite-23007",
-    storageBucket: "dscwebsite-23007.appspot.com",
-    messagingSenderId: "83775788121"
-  };
-  firebase.initializeApp(config);
-</script>

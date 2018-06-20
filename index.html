@@ -15,6 +15,7 @@
 <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400" rel="stylesheet">
 
 <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-firestore.js"></script>
 <script>
   // Initialize Firebase
   var config = {
@@ -26,6 +27,7 @@
     messagingSenderId: "525067348702"
   };
   firebase.initializeApp(config);
+	var firestore=firebase.firestore;
 </script>
 
 <script
@@ -504,11 +506,16 @@ body
           <input id="phone" type="tel" class="validate">
           <label for="phone">Phone</label>
         </div>
-	<div class="input-field  col m8 s12">
-	   <i class="material-icons prefix active">mail</i>
-	   <input id="email" type="email" class="validate">
-           <label for="email">Email</label>
-	</div>
+				<div class="input-field  col m8 s12">
+				   <i class="material-icons prefix active">mail</i>
+				   <input id="email" type="email" class="validate">
+			     <label for="email">Email</label>
+				</div>
+				<div class="input-field col m6 s12">
+          <i class="material-icons prefix active">mode_edit</i>
+					<textarea id="message" class="materialize-textarea"></textarea>
+          <label for="message">Message</label>
+        </div>
 
        </div>
      </div>
