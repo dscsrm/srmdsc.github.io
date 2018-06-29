@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+                    <meta name="theme-color" content="#4285F4">
+        <meta name="msapplication-navbutton-color" content="#4285F4">
+        <meta name="apple-mobile-web-app-status-bar-style" content="#4285F4">
+    <title>SRM Developer Students Club - Initiated by Google</title>
+    <meta charset="utf-8"/>
+                <link rel="icon" href="images/dsc3.png">
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+
+<head>
+  <title></title>
+<style type="text/css">
+
+  .at-section__title {
+  margin: 0 0 70px;
+  color: #000;
+  font-family: 'Roboto' !important; 
+  font-size: 3.2rem;
+  font-weight: 300;
+  line-height: 1.5em;
+  text-align:$prefix: at;
+$totalColumns: 9;
+
+// Custom Prefix
+.#{$prefix} {
+  // Section
+  &-section {
+    &__title {
+      margin: 0 0 70px;
+      color: #000;
+      font-family: "Roboto", sans-serif;
+      font-size: 3.5rem;
+      font-weight: 300;
+      line-height: 2.625rem;
+      text-align: center;
+    }
+  }
+
+  &-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background: #fff;
+    border: 1px solid #e2e9ed;
+
+    @for $i from 1 through $totalColumns {
+      &[data-column="#{$i}"] {
+        .#{$prefix}-column {
+          width: percentage(1 / $i);
+          max-width: percentage(1 / $i);
+          min-width: percentage(1 / $i);
+          flex-basis: percentage(1 / $i);
+        }
+      }
+    }
+  }
+
+  &-column {
+    z-index: 0;
+    position: relative;
+    background: #fff;
+    box-shadow: 0 0 0 1px #e2e9ed;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: box-shadow 0.2s ease, transform 0.2s ease, z-index 0s 0.2s ease;
+
+    &:before {
+      content: "";
+      display: block;
+      padding-top: 100%;
+    }
+
+    &:hover {
+      z-index: 1;
+      box-shadow: 0 8px 50px rgba(#000, 0.2);
+      transform: scale(1.05);
+      transition: box-shadow 0.2s ease, transform 0.2s ease, z-index 0s 0s ease;
+
+      .#{$prefix}-social {
+        margin: 16px 0 0;
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 800px) {
+      width: 50% !important;
+      max-width: 50% !important;
+      min-width: 50% !important;
+      flex-basis: 50% !important;
+    }
+
+    @media (max-width: 600px) {
+      width: 100% !important;
+      max-width: 100% !important;
+      min-width: 100% !important;
+      flex-basis: 100% !important;
+    }
+  }
+
+  &-user {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translate(0, -50%);
+    text-align: center;
+
+    &__avatar {
+      width: 98px;
+      height: 98px;
+      border-radius: 100%;
+      margin: 0 auto 20px;
+      overflow: hidden;
+
+      img {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+
+    &__name {
+      color: #313435;
+      font-family: "Roboto", sans-serif;
+      font-size: 1.5rem;
+      font-weight: 500;
+      line-height: 2.625rem;
+    }
+
+    &__title {
+      color: #6f808a;
+      font-family: "Roboto", sans-serif;
+      font-size: 0.875rem;
+      line-height: 2.375rem;
+    }
+  }
+
+  &-social {
+    margin: 0 0 -18px;
+    opacity: 0;
+    transition: margin 0.2s ease, opacity 0.2s ease;
+
+    &__item {
+      display: inline-block;
+      margin: 0 10px;
+
+      a {
+        display: block;
+      }
+
+      svg {
+        fill: #515f65;
+        display: block;
+        height: 18px;
+        transition: fill 0.2s ease;
+
+        &:hover {
+          fill: #788d96;
+        }
+      }
+    }
+  }
+}
+
+
+
+.container {
+  max-width: 1170px;
+  width: 100%;
+  margin: 100px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+  transform-origin: top center;
+  transform: scale(0.8);
+}
+ center;
+}
+.at-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background: #FFF;
+  border: 1px solid #E2E9ED;
+}
+.at-grid[data-column="1"] .at-column {
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  flex-basis: 100%;
+}
+.at-grid[data-column="2"] .at-column {
+  width: 50%;
+  max-width: 50%;
+  min-width: 50%;
+  flex-basis: 50%;
+}
+.at-grid[data-column="3"] .at-column {
+  width: 33.3333333333%;
+  max-width: 33.3333333333%;
+  min-width: 33.3333333333%;
+  flex-basis: 33.3333333333%;
+}
+.at-grid[data-column="4"] .at-column {
+  width: 25%;
+  max-width: 25%;
+  min-width: 25%;
+  flex-basis: 25%;
+}
+.at-grid[data-column="5"] .at-column {
+  width: 20%;
+  max-width: 20%;
+  min-width: 20%;
+  flex-basis: 20%;
+}
+.at-grid[data-column="6"] .at-column {
+  width: 16.6666666667%;
+  max-width: 16.6666666667%;
+  min-width: 16.6666666667%;
+  flex-basis: 16.6666666667%;
+}
+.at-grid[data-column="7"] .at-column {
+  width: 14.2857142857%;
+  max-width: 14.2857142857%;
+  min-width: 14.2857142857%;
+  flex-basis: 14.2857142857%;
+}
+.at-grid[data-column="8"] .at-column {
+  width: 12.5%;
+  max-width: 12.5%;
+  min-width: 12.5%;
+  flex-basis: 12.5%;
+}
+.at-grid[data-column="9"] .at-column {
+  width: 11.1111111111%;
+  max-width: 11.1111111111%;
+  min-width: 11.1111111111%;
+  flex-basis: 11.1111111111%;
+}
+.at-column {
+  z-index: 0;
+  position: relative;
+  background: #FFF;
+  box-shadow: 0 0 0 1px #E2E9ED;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: box-shadow 0.2s ease, z-index 0s 0.2s ease, -webkit-transform 0.2s ease;
+  transition: box-shadow 0.2s ease, transform 0.2s ease, z-index 0s 0.2s ease;
+  transition: box-shadow 0.2s ease, transform 0.2s ease, z-index 0s 0.2s ease, -webkit-transform 0.2s ease;
+}
+.at-column:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+.at-column:hover {
+  z-index: 1;
+  box-shadow: 0 8px 50px rgba(0, 0, 0, 0.2);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  transition: box-shadow 0.2s ease, z-index 0s 0s ease, -webkit-transform 0.2s ease;
+  transition: box-shadow 0.2s ease, transform 0.2s ease, z-index 0s 0s ease;
+  transition: box-shadow 0.2s ease, transform 0.2s ease, z-index 0s 0s ease, -webkit-transform 0.2s ease;
+}
+.at-column:hover .at-social {
+  margin: 16px 0 0;
+  opacity: 1;
+}
+@media (max-width: 800px) {
+  .at-column {
+    width: 50% !important;
+    max-width: 50% !important;
+    min-width: 50% !important;
+    flex-basis: 50% !important;
+  }
+}
+@media (max-width: 600px) {
+  .at-column {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 100% !important;
+    flex-basis: 100% !important;
+  }
+}
+.at-user {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  text-align: center;
+}
+.at-user__avatar {
+  width: 98px;
+  height: 98px;
+  border-radius: 100%;
+  margin: 0 auto 20px;
+  overflow: hidden;
+}
+.at-user__avatar img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+.at-user__name {
+  color: #313435;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 2.625rem;
+}
+.at-user__title {
+  color: #6F808A;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.875rem;
+  line-height: 2.375rem;
+}
+.at-social {
+  margin: 0 0 -18px;
+  opacity: 0;
+  transition: margin 0.2s ease, opacity 0.2s ease;
+}
+.at-social__item {
+  display: inline-block;
+  margin: 0 10px;
+}
+.at-social__item a {
+  display: block;
+}
+.at-social__item svg {
+  fill: #515F65;
+  display: block;
+  height: 18px;
+  transition: fill 0.2s ease;
+}
+.at-social__item svg:hover {
+  fill: #788D96;
+}
+
+
+
+.container {
+  max-width: 1170px;
+  width: 100%;
+  margin: 100px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+  -webkit-transform-origin: top center;
+          transform-origin: top center;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+ .navbar-fixed {
+  z-index: 1000;
+}
+</style>
+</head>
+
+
+<body>
+
+
+
+<div class="container">
+  <img src="images/dsc3.png" width="100px" style="padding-bottom: 10px"> 
+  <div class="at-section">
+    <div class="at-section__title">The Team - SRMDSC (2017-2018)</div>
+  </div>
+  <div class="at-grid" data-column="3">
+    <div class="at-column">
+      <div class="at-user">
+        <div class="at-user__avatar"><img src="https://scontent.fdel11-1.fna.fbcdn.net/v/t1.0-9/35051906_100656977505474_1113915273049538560_n.jpg?_nc_cat=0&oh=b9e99b411cfc42b461538d75ab1d51f6&oe=5BB67A91"/></div>
+        <div class="at-user__name">Ashirbad Sahu</div>
+        <div class="at-user__title">Team Lead</div>
+        <ul class="at-social">
+          <li class="at-social__item"><a href="https://www.facebook.com/ashirbadsahuomm">
+              <svg viewBox="0 0 24 24" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 9h3l-.375 3H14v9h-3.89v-9H8V9h2.11V6.984c0-1.312.327-2.304.984-2.976C11.75 3.336 12.844 3 14.375 3H17v3h-1.594c-.594 0-.976.094-1.148.281-.172.188-.258.5-.258.938V9z" fill-rule="evenodd"></path>
+              </svg></a></li>
+          <li class="at-social__item"><a href="https://twitter.com/ASHIRBADOMM">
+              <svg viewBox="0 0 24 24" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.875 7.5v.563c0 3.28-1.18 6.257-3.54 8.93C14.978 19.663 11.845 21 7.938 21c-2.5 0-4.812-.687-6.937-2.063.5.063.86.094 1.078.094 2.094 0 3.969-.656 5.625-1.968a4.563 4.563 0 0 1-2.625-.915 4.294 4.294 0 0 1-1.594-2.226c.375.062.657.094.844.094.313 0 .719-.063 1.219-.188-1.031-.219-1.899-.742-2.602-1.57a4.32 4.32 0 0 1-1.054-2.883c.687.328 1.375.516 2.062.516C2.61 9.016 1.938 7.75 1.938 6.094c0-.782.203-1.531.609-2.25 2.406 2.969 5.515 4.547 9.328 4.734-.063-.219-.094-.562-.094-1.031 0-1.281.438-2.36 1.313-3.234C13.969 3.437 15.047 3 16.328 3s2.375.484 3.281 1.453c.938-.156 1.907-.531 2.907-1.125-.313 1.094-.985 1.938-2.016 2.531.969-.093 1.844-.328 2.625-.703-.563.875-1.312 1.656-2.25 2.344z" fill-rule="evenodd"></path>
+              </svg></a></li>
+          <li class="at-social__item"><a href="https://www.linkedin.com/in/ashirbadsahu/">
+              <svg viewBox="0 0 24 24" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.547 3c.406 0 .75.133 1.031.398.281.266.422.602.422 1.008v15.047c0 .406-.14.766-.422 1.078a1.335 1.335 0 0 1-1.031.469h-15c-.406 0-.766-.156-1.078-.469C3.156 20.22 3 19.86 3 19.453V4.406c0-.406.148-.742.445-1.008C3.742 3.133 4.11 3 4.547 3h15zM8.578 18V9.984H6V18h2.578zM7.36 8.766c.407 0 .743-.133 1.008-.399a1.31 1.31 0 0 0 .399-.96c0-.407-.125-.743-.375-1.009C8.14 6.133 7.813 6 7.406 6c-.406 0-.742.133-1.008.398C6.133 6.664 6 7 6 7.406c0 .375.125.696.375.961.25.266.578.399.984.399zM18 18v-4.688c0-1.156-.273-2.03-.82-2.624-.547-.594-1.258-.891-2.133-.891-.938 0-1.719.437-2.344 1.312V9.984h-2.578V18h2.578v-4.547c0-.312.031-.531.094-.656.25-.625.687-.938 1.312-.938.875 0 1.313.578 1.313 1.735V18H18z" fill-rule="evenodd"></path>
+              </svg></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="at-column">
+      <div class="at-user">
+        <div class="at-user__avatar"><img src="https://scontent.fdel11-1.fna.fbcdn.net/v/t1.0-9/61561_622831047753670_1709820288_n.jpg?_nc_cat=0&oh=a210f07187ef5692ec29272a5da433f0&oe=5BE5C77E"/></div>
+        <div class="at-user__name">Shantanu Misra</div>
+        <div class="at-user__title">Team Manager</div>
+        <ul class="at-social">
+          <li class="at-social__item"><a href="https://www.facebook.com/shantanu.mishra.7773">
+              <svg viewBox="0 0 24 24" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 9h3l-.375 3H14v9h-3.89v-9H8V9h2.11V6.984c0-1.312.327-2.304.984-2.976C11.75 3.336 12.844 3 14.375 3H17v3h-1.594c-.594 0-.976.094-1.148.281-.172.188-.258.5-.258.938V9z" fill-rule="evenodd"></path>
+              </svg></a></li>
+        
+        </ul>
+      </div>
+    </div>
+    <div class="at-column">
+      <div class="at-user">
+        <div class="at-user__avatar"><img src="https://scontent.fdel11-1.fna.fbcdn.net/v/t1.0-9/16684072_1786427055016587_2795085093926112999_n.jpg?_nc_cat=0&oh=5cd5aa8ba07cf84afec3ae912f555850&oe=5BE61FCC"/></div>
+        <div class="at-user__name">Ruchira Ray</div>
+        <div class="at-user__title">Core Team Technical Coordinator</div>
+        <ul class="at-social">
+          <li class="at-social__item"><a href="https://www.facebook.com/ruchira.ray.96">
+              <svg viewBox="0 0 24 24" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 9h3l-.375 3H14v9h-3.89v-9H8V9h2.11V6.984c0-1.312.327-2.304.984-2.976C11.75 3.336 12.844 3 14.375 3H17v3h-1.594c-.594 0-.976.094-1.148.281-.172.188-.258.5-.258.938V9z" fill-rule="evenodd"></path>
+              </svg></a></li>
+   
+          <li class="at-social__item"><a href="https://www.linkedin.com/in/ruchira-ray/">
+              <svg viewBox="0 0 24 24" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.547 3c.406 0 .75.133 1.031.398.281.266.422.602.422 1.008v15.047c0 .406-.14.766-.422 1.078a1.335 1.335 0 0 1-1.031.469h-15c-.406 0-.766-.156-1.078-.469C3.156 20.22 3 19.86 3 19.453V4.406c0-.406.148-.742.445-1.008C3.742 3.133 4.11 3 4.547 3h15zM8.578 18V9.984H6V18h2.578zM7.36 8.766c.407 0 .743-.133 1.008-.399a1.31 1.31 0 0 0 .399-.96c0-.407-.125-.743-.375-1.009C8.14 6.133 7.813 6 7.406 6c-.406 0-.742.133-1.008.398C6.133 6.664 6 7 6 7.406c0 .375.125.696.375.961.25.266.578.399.984.399zM18 18v-4.688c0-1.156-.273-2.03-.82-2.624-.547-.594-1.258-.891-2.133-.891-.938 0-1.719.437-2.344 1.312V9.984h-2.578V18h2.578v-4.547c0-.312.031-.531.094-.656.25-.625.687-.938 1.312-.938.875 0 1.313.578 1.313 1.735V18H18z" fill-rule="evenodd"></path>
+              </svg></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="at-column">
+      <div class="at-user">
+        <div class="at-user__avatar"><img src="https://scontent.fdel11-1.fna.fbcdn.net/v/t1.0-9/25995017_1801062236616877_4100262018781659161_n.jpg?_nc_cat=0&oh=760d61572324bf44e951549bf7a930b7&oe=5BEB19C3"/></div>
+        <div class="at-user__name">Abhimanyu Sharma</div>
+        <div class="at-user__title">Core Team General Coordinator</div>
+        <ul class="at-social">
+          <li class="at-social__item"><a href="https://www.facebook.com/abhimanyush11">
+              <svg viewBox="0 0 24 24" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 9h3l-.375 3H14v9h-3.89v-9H8V9h2.11V6.984c0-1.312.327-2.304.984-2.976C11.75 3.336 12.844 3 14.375 3H17v3h-1.594c-.594 0-.976.094-1.148.281-.172.188-.258.5-.258.938V9z" fill-rule="evenodd"></path>
+              </svg></a></li>
+          
+          <li class="at-social__item"><a href="https://www.linkedin.com/in/abhimanyu-sharma-77905a119">
+              <svg viewBox="0 0 24 24" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.547 3c.406 0 .75.133 1.031.398.281.266.422.602.422 1.008v15.047c0 .406-.14.766-.422 1.078a1.335 1.335 0 0 1-1.031.469h-15c-.406 0-.766-.156-1.078-.469C3.156 20.22 3 19.86 3 19.453V4.406c0-.406.148-.742.445-1.008C3.742 3.133 4.11 3 4.547 3h15zM8.578 18V9.984H6V18h2.578zM7.36 8.766c.407 0 .743-.133 1.008-.399a1.31 1.31 0 0 0 .399-.96c0-.407-.125-.743-.375-1.009C8.14 6.133 7.813 6 7.406 6c-.406 0-.742.133-1.008.398C6.133 6.664 6 7 6 7.406c0 .375.125.696.375.961.25.266.578.399.984.399zM18 18v-4.688c0-1.156-.273-2.03-.82-2.624-.547-.594-1.258-.891-2.133-.891-.938 0-1.719.437-2.344 1.312V9.984h-2.578V18h2.578v-4.547c0-.312.031-.531.094-.656.25-.625.687-.938 1.312-.938.875 0 1.313.578 1.313 1.735V18H18z" fill-rule="evenodd"></path>
+              </svg></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="at-column">
+      <div class="at-user">
+        <div class="at-user__avatar"><img src="https://scontent.fdel11-1.fna.fbcdn.net/v/t1.0-9/24852294_107151850073850_314304048787493246_n.jpg?_nc_cat=0&oh=6ae4ec6e842d28d7c3b07e86e2c1993f&oe=5BB500F0"/></div>
+        <div class="at-user__name">Dhruve Moudgil</div>
+        <div class="at-user__title">Technical Lead</div>
+        <ul class="at-social">
+          <li class="at-social__item"><a href="https://www.facebook.com/dhruve.moudgil.50">
+              <svg viewBox="0 0 24 24" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 9h3l-.375 3H14v9h-3.89v-9H8V9h2.11V6.984c0-1.312.327-2.304.984-2.976C11.75 3.336 12.844 3 14.375 3H17v3h-1.594c-.594 0-.976.094-1.148.281-.172.188-.258.5-.258.938V9z" fill-rule="evenodd"></path>
+              </svg></a></li>
+          <li class="at-social__item"><a href="https://twitter.com/DhruveMod">
+              <svg viewBox="0 0 24 24" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.875 7.5v.563c0 3.28-1.18 6.257-3.54 8.93C14.978 19.663 11.845 21 7.938 21c-2.5 0-4.812-.687-6.937-2.063.5.063.86.094 1.078.094 2.094 0 3.969-.656 5.625-1.968a4.563 4.563 0 0 1-2.625-.915 4.294 4.294 0 0 1-1.594-2.226c.375.062.657.094.844.094.313 0 .719-.063 1.219-.188-1.031-.219-1.899-.742-2.602-1.57a4.32 4.32 0 0 1-1.054-2.883c.687.328 1.375.516 2.062.516C2.61 9.016 1.938 7.75 1.938 6.094c0-.782.203-1.531.609-2.25 2.406 2.969 5.515 4.547 9.328 4.734-.063-.219-.094-.562-.094-1.031 0-1.281.438-2.36 1.313-3.234C13.969 3.437 15.047 3 16.328 3s2.375.484 3.281 1.453c.938-.156 1.907-.531 2.907-1.125-.313 1.094-.985 1.938-2.016 2.531.969-.093 1.844-.328 2.625-.703-.563.875-1.312 1.656-2.25 2.344z" fill-rule="evenodd"></path>
+              </svg></a></li>
+          <li class="at-social__item"><a href="https://www.linkedin.com/in/dhruve-moudgil-898669131/">
+              <svg viewBox="0 0 24 24" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.547 3c.406 0 .75.133 1.031.398.281.266.422.602.422 1.008v15.047c0 .406-.14.766-.422 1.078a1.335 1.335 0 0 1-1.031.469h-15c-.406 0-.766-.156-1.078-.469C3.156 20.22 3 19.86 3 19.453V4.406c0-.406.148-.742.445-1.008C3.742 3.133 4.11 3 4.547 3h15zM8.578 18V9.984H6V18h2.578zM7.36 8.766c.407 0 .743-.133 1.008-.399a1.31 1.31 0 0 0 .399-.96c0-.407-.125-.743-.375-1.009C8.14 6.133 7.813 6 7.406 6c-.406 0-.742.133-1.008.398C6.133 6.664 6 7 6 7.406c0 .375.125.696.375.961.25.266.578.399.984.399zM18 18v-4.688c0-1.156-.273-2.03-.82-2.624-.547-.594-1.258-.891-2.133-.891-.938 0-1.719.437-2.344 1.312V9.984h-2.578V18h2.578v-4.547c0-.312.031-.531.094-.656.25-.625.687-.938 1.312-.938.875 0 1.313.578 1.313 1.735V18H18z" fill-rule="evenodd"></path>
+              </svg></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="at-column">
+      <div class="at-user">
+        <div class="at-user__avatar"><img src="https://scontent.fdel11-1.fna.fbcdn.net/v/t1.0-1/20597489_10208275334755624_5031113183589171993_n.jpg?_nc_cat=0&oh=d0e3d2021872bf8b3f36bf7635a79667&oe=5BE4A21E"/></div>
+        <div class="at-user__name">Harsh Jain</div>
+        <div class="at-user__title">Business Lead</div>
+        <ul class="at-social">
+          <li class="at-social__item"><a href="https://www.facebook.com/iharsh97">
+              <svg viewBox="0 0 24 24" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 9h3l-.375 3H14v9h-3.89v-9H8V9h2.11V6.984c0-1.312.327-2.304.984-2.976C11.75 3.336 12.844 3 14.375 3H17v3h-1.594c-.594 0-.976.094-1.148.281-.172.188-.258.5-.258.938V9z" fill-rule="evenodd"></path>
+              </svg></a></li>
+   
+          <li class="at-social__item"><a href="https://www.linkedin.com/in/hjain14/">
+              <svg viewBox="0 0 24 24" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.547 3c.406 0 .75.133 1.031.398.281.266.422.602.422 1.008v15.047c0 .406-.14.766-.422 1.078a1.335 1.335 0 0 1-1.031.469h-15c-.406 0-.766-.156-1.078-.469C3.156 20.22 3 19.86 3 19.453V4.406c0-.406.148-.742.445-1.008C3.742 3.133 4.11 3 4.547 3h15zM8.578 18V9.984H6V18h2.578zM7.36 8.766c.407 0 .743-.133 1.008-.399a1.31 1.31 0 0 0 .399-.96c0-.407-.125-.743-.375-1.009C8.14 6.133 7.813 6 7.406 6c-.406 0-.742.133-1.008.398C6.133 6.664 6 7 6 7.406c0 .375.125.696.375.961.25.266.578.399.984.399zM18 18v-4.688c0-1.156-.273-2.03-.82-2.624-.547-.594-1.258-.891-2.133-.891-.938 0-1.719.437-2.344 1.312V9.984h-2.578V18h2.578v-4.547c0-.312.031-.531.094-.656.25-.625.687-.938 1.312-.938.875 0 1.313.578 1.313 1.735V18H18z" fill-rule="evenodd"></path>
+              </svg></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="at-column">
+      <div class="at-user">
+        <div class="at-user__avatar"><img src="https://scontent.fdel11-1.fna.fbcdn.net/v/t1.0-9/30708367_1909976312369804_607759537653977177_n.jpg?_nc_cat=0&oh=c6a3d2731a75b8e7346fa777d4e29958&oe=5BE5EE77"/></div>
+        <div class="at-user__name">Ronak Kabra</div>
+        <div class="at-user__title">Team Mentor (Business)</div>
+        <ul class="at-social">
+          <li class="at-social__item"><a href="https://www.facebook.com/rronakkabra">
+              <svg viewBox="0 0 24 24" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 9h3l-.375 3H14v9h-3.89v-9H8V9h2.11V6.984c0-1.312.327-2.304.984-2.976C11.75 3.336 12.844 3 14.375 3H17v3h-1.594c-.594 0-.976.094-1.148.281-.172.188-.258.5-.258.938V9z" fill-rule="evenodd"></path>
+              </svg></a></li>
+        
+          <li class="at-social__item"><a href="https://www.linkedin.com/in/ronak-kabra-2a0ab310a/">
+              <svg viewBox="0 0 24 24" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.547 3c.406 0 .75.133 1.031.398.281.266.422.602.422 1.008v15.047c0 .406-.14.766-.422 1.078a1.335 1.335 0 0 1-1.031.469h-15c-.406 0-.766-.156-1.078-.469C3.156 20.22 3 19.86 3 19.453V4.406c0-.406.148-.742.445-1.008C3.742 3.133 4.11 3 4.547 3h15zM8.578 18V9.984H6V18h2.578zM7.36 8.766c.407 0 .743-.133 1.008-.399a1.31 1.31 0 0 0 .399-.96c0-.407-.125-.743-.375-1.009C8.14 6.133 7.813 6 7.406 6c-.406 0-.742.133-1.008.398C6.133 6.664 6 7 6 7.406c0 .375.125.696.375.961.25.266.578.399.984.399zM18 18v-4.688c0-1.156-.273-2.03-.82-2.624-.547-.594-1.258-.891-2.133-.891-.938 0-1.719.437-2.344 1.312V9.984h-2.578V18h2.578v-4.547c0-.312.031-.531.094-.656.25-.625.687-.938 1.312-.938.875 0 1.313.578 1.313 1.735V18H18z" fill-rule="evenodd"></path>
+              </svg></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="at-column">
+      <div class="at-user">
+        <div class="at-user__avatar"><img src="https://scontent.fdel11-1.fna.fbcdn.net/v/t1.0-9/23559790_1438885329562005_1748802799883933334_n.jpg?_nc_cat=0&oh=62f31e1d58f1a9c47483d2c0d90b1ad5&oe=5B9FC346"/></div>
+        <div class="at-user__name">Sowmya Bajpai</div>
+        <div class="at-user__title">PR Lead</div>
+        <ul class="at-social">
+          <li class="at-social__item"><a href="https://www.facebook.com/sowmya.bajpai">
+              <svg viewBox="0 0 24 24" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 9h3l-.375 3H14v9h-3.89v-9H8V9h2.11V6.984c0-1.312.327-2.304.984-2.976C11.75 3.336 12.844 3 14.375 3H17v3h-1.594c-.594 0-.976.094-1.148.281-.172.188-.258.5-.258.938V9z" fill-rule="evenodd"></path>
+              </svg></a></li>
+         
+          <li class="at-social__item"><a href="https://www.linkedin.com/in/sowmya-bajpai-40046531/">
+              <svg viewBox="0 0 24 24" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.547 3c.406 0 .75.133 1.031.398.281.266.422.602.422 1.008v15.047c0 .406-.14.766-.422 1.078a1.335 1.335 0 0 1-1.031.469h-15c-.406 0-.766-.156-1.078-.469C3.156 20.22 3 19.86 3 19.453V4.406c0-.406.148-.742.445-1.008C3.742 3.133 4.11 3 4.547 3h15zM8.578 18V9.984H6V18h2.578zM7.36 8.766c.407 0 .743-.133 1.008-.399a1.31 1.31 0 0 0 .399-.96c0-.407-.125-.743-.375-1.009C8.14 6.133 7.813 6 7.406 6c-.406 0-.742.133-1.008.398C6.133 6.664 6 7 6 7.406c0 .375.125.696.375.961.25.266.578.399.984.399zM18 18v-4.688c0-1.156-.273-2.03-.82-2.624-.547-.594-1.258-.891-2.133-.891-.938 0-1.719.437-2.344 1.312V9.984h-2.578V18h2.578v-4.547c0-.312.031-.531.094-.656.25-.625.687-.938 1.312-.938.875 0 1.313.578 1.313 1.735V18H18z" fill-rule="evenodd"></path>
+              </svg></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="at-column">
+      <div class="at-user">
+        <div class="at-user__avatar"><img src="https://scontent.fdel11-1.fna.fbcdn.net/v/t1.0-9/26169769_1753788731321383_1454953026714624841_n.jpg?_nc_cat=0&oh=0b053164e6f3aac0b4389ce405353b43&oe=5BA2CEDF"/></div>
+        <div class="at-user__name">Tushar Upadhyay</div>
+        <div class="at-user__title">Team Mentor (PR)</div>
+        <ul class="at-social">
+          <li class="at-social__item"><a href="https://www.facebook.com/tushar.upadhyay.39">
+              <svg viewBox="0 0 24 24" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 9h3l-.375 3H14v9h-3.89v-9H8V9h2.11V6.984c0-1.312.327-2.304.984-2.976C11.75 3.336 12.844 3 14.375 3H17v3h-1.594c-.594 0-.976.094-1.148.281-.172.188-.258.5-.258.938V9z" fill-rule="evenodd"></path>
+              </svg></a></li>
+         
+          <li class="at-social__item"><a href="https://www.linkedin.com/in/tushar-upadhyay-57b531111/">
+              <svg viewBox="0 0 24 24" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.547 3c.406 0 .75.133 1.031.398.281.266.422.602.422 1.008v15.047c0 .406-.14.766-.422 1.078a1.335 1.335 0 0 1-1.031.469h-15c-.406 0-.766-.156-1.078-.469C3.156 20.22 3 19.86 3 19.453V4.406c0-.406.148-.742.445-1.008C3.742 3.133 4.11 3 4.547 3h15zM8.578 18V9.984H6V18h2.578zM7.36 8.766c.407 0 .743-.133 1.008-.399a1.31 1.31 0 0 0 .399-.96c0-.407-.125-.743-.375-1.009C8.14 6.133 7.813 6 7.406 6c-.406 0-.742.133-1.008.398C6.133 6.664 6 7 6 7.406c0 .375.125.696.375.961.25.266.578.399.984.399zM18 18v-4.688c0-1.156-.273-2.03-.82-2.624-.547-.594-1.258-.891-2.133-.891-.938 0-1.719.437-2.344 1.312V9.984h-2.578V18h2.578v-4.547c0-.312.031-.531.094-.656.25-.625.687-.938 1.312-.938.875 0 1.313.578 1.313 1.735V18H18z" fill-rule="evenodd"></path>
+              </svg></a></li>
+        </ul>
+      </div>
+    </div>
+<div class="at-column">
+      <div class="at-user">
+        <div class="at-user__avatar"><img src="https://scontent.fdel11-1.fna.fbcdn.net/v/t1.0-9/20729433_1142485979186654_3784052119696504945_n.jpg?_nc_cat=0&oh=1241297a80585aab12b006e85de9b915&oe=5BE56551"/></div>
+        <div class="at-user__name">Rashi Nair</div>
+        <div class="at-user__title">Team Mentor (PR)</div>
+        <ul class="at-social">
+          <li class="at-social__item"><a href="https://www.facebook.com/rashi.nair.104">
+              <svg viewBox="0 0 24 24" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 9h3l-.375 3H14v9h-3.89v-9H8V9h2.11V6.984c0-1.312.327-2.304.984-2.976C11.75 3.336 12.844 3 14.375 3H17v3h-1.594c-.594 0-.976.094-1.148.281-.172.188-.258.5-.258.938V9z" fill-rule="evenodd"></path>
+              </svg></a></li>
+      
+          <li class="at-social__item"><a href="https://www.linkedin.com/in/rashi-nair-4714b2104/">
+              <svg viewBox="0 0 24 24" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.547 3c.406 0 .75.133 1.031.398.281.266.422.602.422 1.008v15.047c0 .406-.14.766-.422 1.078a1.335 1.335 0 0 1-1.031.469h-15c-.406 0-.766-.156-1.078-.469C3.156 20.22 3 19.86 3 19.453V4.406c0-.406.148-.742.445-1.008C3.742 3.133 4.11 3 4.547 3h15zM8.578 18V9.984H6V18h2.578zM7.36 8.766c.407 0 .743-.133 1.008-.399a1.31 1.31 0 0 0 .399-.96c0-.407-.125-.743-.375-1.009C8.14 6.133 7.813 6 7.406 6c-.406 0-.742.133-1.008.398C6.133 6.664 6 7 6 7.406c0 .375.125.696.375.961.25.266.578.399.984.399zM18 18v-4.688c0-1.156-.273-2.03-.82-2.624-.547-.594-1.258-.891-2.133-.891-.938 0-1.719.437-2.344 1.312V9.984h-2.578V18h2.578v-4.547c0-.312.031-.531.094-.656.25-.625.687-.938 1.312-.938.875 0 1.313.578 1.313 1.735V18H18z" fill-rule="evenodd"></path>
+              </svg></a></li>
+        </ul>
+      </div>
+    </div><div class="at-column">
+      <div class="at-user">
+        <div class="at-user__avatar"><img src="https://scontent.fdel11-1.fna.fbcdn.net/v/t1.0-9/23844901_1528024453948053_129380019931379671_n.jpg?_nc_cat=0&oh=f35f0af441e167648509513a8f14cd1a&oe=5BE2BFE1"/></div>
+        <div class="at-user__name">Soumi Roy</div>
+        <div class="at-user__title">Team Mentor (PR)</div>
+        <ul class="at-social">
+          <li class="at-social__item"><a href="https://www.facebook.com/Soumi26">
+              <svg viewBox="0 0 24 24" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 9h3l-.375 3H14v9h-3.89v-9H8V9h2.11V6.984c0-1.312.327-2.304.984-2.976C11.75 3.336 12.844 3 14.375 3H17v3h-1.594c-.594 0-.976.094-1.148.281-.172.188-.258.5-.258.938V9z" fill-rule="evenodd"></path>
+              </svg></a></li>
+        
+          <li class="at-social__item"><a href="https://www.linkedin.com/in/soumi-roy-aa8954120/">
+              <svg viewBox="0 0 24 24" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.547 3c.406 0 .75.133 1.031.398.281.266.422.602.422 1.008v15.047c0 .406-.14.766-.422 1.078a1.335 1.335 0 0 1-1.031.469h-15c-.406 0-.766-.156-1.078-.469C3.156 20.22 3 19.86 3 19.453V4.406c0-.406.148-.742.445-1.008C3.742 3.133 4.11 3 4.547 3h15zM8.578 18V9.984H6V18h2.578zM7.36 8.766c.407 0 .743-.133 1.008-.399a1.31 1.31 0 0 0 .399-.96c0-.407-.125-.743-.375-1.009C8.14 6.133 7.813 6 7.406 6c-.406 0-.742.133-1.008.398C6.133 6.664 6 7 6 7.406c0 .375.125.696.375.961.25.266.578.399.984.399zM18 18v-4.688c0-1.156-.273-2.03-.82-2.624-.547-.594-1.258-.891-2.133-.891-.938 0-1.719.437-2.344 1.312V9.984h-2.578V18h2.578v-4.547c0-.312.031-.531.094-.656.25-.625.687-.938 1.312-.938.875 0 1.313.578 1.313 1.735V18H18z" fill-rule="evenodd"></path>
+              </svg></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="at-column">
+      <div class="at-user">
+        <div class="at-user__avatar"><img src="https://scontent.fdel11-1.fna.fbcdn.net/v/t1.0-9/17952732_1616574855022673_8941376594643323301_n.jpg?_nc_cat=0&oh=48dcdf56ebfdaf8cbcae6ff9026e3e87&oe=5B9DD236"/></div>
+        <div class="at-user__name">Meghna Choudhary</div>
+        <div class="at-user__title">Team Mentor (PR)</div>
+        <ul class="at-social">
+          <li class="at-social__item"><a href="https://www.facebook.com/meghna.choudhary">
+              <svg viewBox="0 0 24 24" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 9h3l-.375 3H14v9h-3.89v-9H8V9h2.11V6.984c0-1.312.327-2.304.984-2.976C11.75 3.336 12.844 3 14.375 3H17v3h-1.594c-.594 0-.976.094-1.148.281-.172.188-.258.5-.258.938V9z" fill-rule="evenodd"></path>
+              </svg></a></li>
+        
+          <li class="at-social__item"><a href="https://www.linkedin.com/in/meghna-choudhury-723a07151/">
+              <svg viewBox="0 0 24 24" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.547 3c.406 0 .75.133 1.031.398.281.266.422.602.422 1.008v15.047c0 .406-.14.766-.422 1.078a1.335 1.335 0 0 1-1.031.469h-15c-.406 0-.766-.156-1.078-.469C3.156 20.22 3 19.86 3 19.453V4.406c0-.406.148-.742.445-1.008C3.742 3.133 4.11 3 4.547 3h15zM8.578 18V9.984H6V18h2.578zM7.36 8.766c.407 0 .743-.133 1.008-.399a1.31 1.31 0 0 0 .399-.96c0-.407-.125-.743-.375-1.009C8.14 6.133 7.813 6 7.406 6c-.406 0-.742.133-1.008.398C6.133 6.664 6 7 6 7.406c0 .375.125.696.375.961.25.266.578.399.984.399zM18 18v-4.688c0-1.156-.273-2.03-.82-2.624-.547-.594-1.258-.891-2.133-.891-.938 0-1.719.437-2.344 1.312V9.984h-2.578V18h2.578v-4.547c0-.312.031-.531.094-.656.25-.625.687-.938 1.312-.938.875 0 1.313.578 1.313 1.735V18H18z" fill-rule="evenodd"></path>
+              </svg></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="at-column">
+      <div class="at-user">
+        <div class="at-user__avatar"><img src="https://scontent.fdel11-1.fna.fbcdn.net/v/t1.0-9/17884604_1513000442075066_1967427435844891214_n.jpg?_nc_cat=0&oh=19dd6309ddb39ccbedda964dbfb5f27d&oe=5BEBADD1"/></div>
+        <div class="at-user__name">Rohit Agrawal</div>
+        <div class="at-user__title">Photography & Documentation Lead</div>
+        <ul class="at-social">
+          <li class="at-social__item"><a href="https://www.facebook.com/rohit1997agrawal">
+              <svg viewBox="0 0 24 24" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 9h3l-.375 3H14v9h-3.89v-9H8V9h2.11V6.984c0-1.312.327-2.304.984-2.976C11.75 3.336 12.844 3 14.375 3H17v3h-1.594c-.594 0-.976.094-1.148.281-.172.188-.258.5-.258.938V9z" fill-rule="evenodd"></path>
+              </svg></a></li>
+         
+          <li class="at-social__item"><a href="https://www.linkedin.com/in/rohit-agrawal-501b1966/">
+              <svg viewBox="0 0 24 24" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.547 3c.406 0 .75.133 1.031.398.281.266.422.602.422 1.008v15.047c0 .406-.14.766-.422 1.078a1.335 1.335 0 0 1-1.031.469h-15c-.406 0-.766-.156-1.078-.469C3.156 20.22 3 19.86 3 19.453V4.406c0-.406.148-.742.445-1.008C3.742 3.133 4.11 3 4.547 3h15zM8.578 18V9.984H6V18h2.578zM7.36 8.766c.407 0 .743-.133 1.008-.399a1.31 1.31 0 0 0 .399-.96c0-.407-.125-.743-.375-1.009C8.14 6.133 7.813 6 7.406 6c-.406 0-.742.133-1.008.398C6.133 6.664 6 7 6 7.406c0 .375.125.696.375.961.25.266.578.399.984.399zM18 18v-4.688c0-1.156-.273-2.03-.82-2.624-.547-.594-1.258-.891-2.133-.891-.938 0-1.719.437-2.344 1.312V9.984h-2.578V18h2.578v-4.547c0-.312.031-.531.094-.656.25-.625.687-.938 1.312-.938.875 0 1.313.578 1.313 1.735V18H18z" fill-rule="evenodd"></path>
+              </svg></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="at-column">
+      <div class="at-user">
+        <div class="at-user__avatar"><img src="https://scontent.fdel11-1.fna.fbcdn.net/v/t1.0-9/22405485_1731973490206905_380744757094952848_n.jpg?_nc_cat=0&oh=1796e2994728fd2f8d42d63a9b402d60&oe=5BA01AE1"/></div>
+        <div class="at-user__name">Aarti Agrawal</div>
+        <div class="at-user__title">Creative Lead</div>
+        <ul class="at-social">
+          <li class="at-social__item"><a href="https://www.facebook.com/aarti.agrawal.3958">
+              <svg viewBox="0 0 24 24" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 9h3l-.375 3H14v9h-3.89v-9H8V9h2.11V6.984c0-1.312.327-2.304.984-2.976C11.75 3.336 12.844 3 14.375 3H17v3h-1.594c-.594 0-.976.094-1.148.281-.172.188-.258.5-.258.938V9z" fill-rule="evenodd"></path>
+              </svg></a></li>
+         
+          <li class="at-social__item"><a href="https://www.linkedin.com/in/aarti-agrawal-0ab22b127/">
+              <svg viewBox="0 0 24 24" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.547 3c.406 0 .75.133 1.031.398.281.266.422.602.422 1.008v15.047c0 .406-.14.766-.422 1.078a1.335 1.335 0 0 1-1.031.469h-15c-.406 0-.766-.156-1.078-.469C3.156 20.22 3 19.86 3 19.453V4.406c0-.406.148-.742.445-1.008C3.742 3.133 4.11 3 4.547 3h15zM8.578 18V9.984H6V18h2.578zM7.36 8.766c.407 0 .743-.133 1.008-.399a1.31 1.31 0 0 0 .399-.96c0-.407-.125-.743-.375-1.009C8.14 6.133 7.813 6 7.406 6c-.406 0-.742.133-1.008.398C6.133 6.664 6 7 6 7.406c0 .375.125.696.375.961.25.266.578.399.984.399zM18 18v-4.688c0-1.156-.273-2.03-.82-2.624-.547-.594-1.258-.891-2.133-.891-.938 0-1.719.437-2.344 1.312V9.984h-2.578V18h2.578v-4.547c0-.312.031-.531.094-.656.25-.625.687-.938 1.312-.938.875 0 1.313.578 1.313 1.735V18H18z" fill-rule="evenodd"></path>
+              </svg></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="at-column">
+      <div class="at-user">
+        <div class="at-user__avatar"><img src="https://scontent.fdel11-1.fna.fbcdn.net/v/t1.0-9/18485780_10213788817818007_7719059739870043742_n.jpg?_nc_cat=0&oh=c352abaa374d0ece2310a11d449e123e&oe=5BAEF2B5"/></div>
+        <div class="at-user__name">Shujath Khan</div>
+        <div class="at-user__title">Team Mentor (Creative)</div>
+        <ul class="at-social">
+          <li class="at-social__item"><a href="https://www.facebook.com/shujath.live">
+              <svg viewBox="0 0 24 24" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 9h3l-.375 3H14v9h-3.89v-9H8V9h2.11V6.984c0-1.312.327-2.304.984-2.976C11.75 3.336 12.844 3 14.375 3H17v3h-1.594c-.594 0-.976.094-1.148.281-.172.188-.258.5-.258.938V9z" fill-rule="evenodd"></path>
+              </svg></a></li>
+          <li class="at-social__item"><a href="https://twitter.com/Shujathonline">
+              <svg viewBox="0 0 24 24" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.875 7.5v.563c0 3.28-1.18 6.257-3.54 8.93C14.978 19.663 11.845 21 7.938 21c-2.5 0-4.812-.687-6.937-2.063.5.063.86.094 1.078.094 2.094 0 3.969-.656 5.625-1.968a4.563 4.563 0 0 1-2.625-.915 4.294 4.294 0 0 1-1.594-2.226c.375.062.657.094.844.094.313 0 .719-.063 1.219-.188-1.031-.219-1.899-.742-2.602-1.57a4.32 4.32 0 0 1-1.054-2.883c.687.328 1.375.516 2.062.516C2.61 9.016 1.938 7.75 1.938 6.094c0-.782.203-1.531.609-2.25 2.406 2.969 5.515 4.547 9.328 4.734-.063-.219-.094-.562-.094-1.031 0-1.281.438-2.36 1.313-3.234C13.969 3.437 15.047 3 16.328 3s2.375.484 3.281 1.453c.938-.156 1.907-.531 2.907-1.125-.313 1.094-.985 1.938-2.016 2.531.969-.093 1.844-.328 2.625-.703-.563.875-1.312 1.656-2.25 2.344z" fill-rule="evenodd"></path>
+              </svg></a></li>
+          <li class="at-social__item"><a href="https://www.linkedin.com/in/shujath-khan/">
+              <svg viewBox="0 0 24 24" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.547 3c.406 0 .75.133 1.031.398.281.266.422.602.422 1.008v15.047c0 .406-.14.766-.422 1.078a1.335 1.335 0 0 1-1.031.469h-15c-.406 0-.766-.156-1.078-.469C3.156 20.22 3 19.86 3 19.453V4.406c0-.406.148-.742.445-1.008C3.742 3.133 4.11 3 4.547 3h15zM8.578 18V9.984H6V18h2.578zM7.36 8.766c.407 0 .743-.133 1.008-.399a1.31 1.31 0 0 0 .399-.96c0-.407-.125-.743-.375-1.009C8.14 6.133 7.813 6 7.406 6c-.406 0-.742.133-1.008.398C6.133 6.664 6 7 6 7.406c0 .375.125.696.375.961.25.266.578.399.984.399zM18 18v-4.688c0-1.156-.273-2.03-.82-2.624-.547-.594-1.258-.891-2.133-.891-.938 0-1.719.437-2.344 1.312V9.984h-2.578V18h2.578v-4.547c0-.312.031-.531.094-.656.25-.625.687-.938 1.312-.938.875 0 1.313.578 1.313 1.735V18H18z" fill-rule="evenodd"></path>
+              </svg></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="at-column">
+      <div class="at-user">
+        <div class="at-user__avatar"><img src="https://scontent.fdel11-1.fna.fbcdn.net/v/t1.0-9/15822815_10211408843407959_6148300714226338190_n.jpg?_nc_cat=0&oh=70d1324daaa43df58989384f550faf02&oe=5BB372DC"/></div>
+        <div class="at-user__name">Madhav Khanna</div>
+        <div class="at-user__title">Team Mentor (Creative)</div>
+        <ul class="at-social">
+          <li class="at-social__item"><a href="https://www.facebook.com/madhav.khanna1">
+              <svg viewBox="0 0 24 24" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 9h3l-.375 3H14v9h-3.89v-9H8V9h2.11V6.984c0-1.312.327-2.304.984-2.976C11.75 3.336 12.844 3 14.375 3H17v3h-1.594c-.594 0-.976.094-1.148.281-.172.188-.258.5-.258.938V9z" fill-rule="evenodd"></path>
+              </svg></a></li>
+          <li class="at-social__item"><a href="https://twitter.com/MadhavKhanna9">
+              <svg viewBox="0 0 24 24" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.875 7.5v.563c0 3.28-1.18 6.257-3.54 8.93C14.978 19.663 11.845 21 7.938 21c-2.5 0-4.812-.687-6.937-2.063.5.063.86.094 1.078.094 2.094 0 3.969-.656 5.625-1.968a4.563 4.563 0 0 1-2.625-.915 4.294 4.294 0 0 1-1.594-2.226c.375.062.657.094.844.094.313 0 .719-.063 1.219-.188-1.031-.219-1.899-.742-2.602-1.57a4.32 4.32 0 0 1-1.054-2.883c.687.328 1.375.516 2.062.516C2.61 9.016 1.938 7.75 1.938 6.094c0-.782.203-1.531.609-2.25 2.406 2.969 5.515 4.547 9.328 4.734-.063-.219-.094-.562-.094-1.031 0-1.281.438-2.36 1.313-3.234C13.969 3.437 15.047 3 16.328 3s2.375.484 3.281 1.453c.938-.156 1.907-.531 2.907-1.125-.313 1.094-.985 1.938-2.016 2.531.969-.093 1.844-.328 2.625-.703-.563.875-1.312 1.656-2.25 2.344z" fill-rule="evenodd"></path>
+              </svg></a></li>
+          <li class="at-social__item"><a href="https://www.linkedin.com/in/mk-748/">
+              <svg viewBox="0 0 24 24" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.547 3c.406 0 .75.133 1.031.398.281.266.422.602.422 1.008v15.047c0 .406-.14.766-.422 1.078a1.335 1.335 0 0 1-1.031.469h-15c-.406 0-.766-.156-1.078-.469C3.156 20.22 3 19.86 3 19.453V4.406c0-.406.148-.742.445-1.008C3.742 3.133 4.11 3 4.547 3h15zM8.578 18V9.984H6V18h2.578zM7.36 8.766c.407 0 .743-.133 1.008-.399a1.31 1.31 0 0 0 .399-.96c0-.407-.125-.743-.375-1.009C8.14 6.133 7.813 6 7.406 6c-.406 0-.742.133-1.008.398C6.133 6.664 6 7 6 7.406c0 .375.125.696.375.961.25.266.578.399.984.399zM18 18v-4.688c0-1.156-.273-2.03-.82-2.624-.547-.594-1.258-.891-2.133-.891-.938 0-1.719.437-2.344 1.312V9.984h-2.578V18h2.578v-4.547c0-.312.031-.531.094-.656.25-.625.687-.938 1.312-.938.875 0 1.313.578 1.313 1.735V18H18z" fill-rule="evenodd"></path>
+              </svg></a></li>
+        </ul>
+      </div>
+    </div>
+    
+
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
+   
+ 
+        
+</script>
+</body>
+</html>
