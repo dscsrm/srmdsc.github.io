@@ -263,7 +263,10 @@ $(document).ready(function () {
     var colorcode = {
         'period1': '#fec541',
         'period2': '#36d484',
-        'period3': '#32ccf4'
+        'period3': '#32ccf4',
+		'period4': '#FF0000',
+		'period5': '#800080'
+		
     };
     var timeline = new PRESTimeline($('#this-timeline'), colorcode);
 	//periodNext.click();
