@@ -7,7 +7,7 @@
 		    <meta name="msapplication-navbutton-color" content="#4285F4">
 		    <meta name="apple-mobile-web-app-status-bar-style" content="#4285F4">
 		    <meta name="description" content="SRM Developer Students Club (DSC) is a Google Developers program for SRM University students to learn mobile and web development skills.">
-		<title>SRM Developer Students Club - Initiated by Google</title>
+		<title>SRM Developer Students Club - Initiated by Google Developers</title>
 		<meta charset="utf-8"/>
                 <link rel="icon" href="images/dsc3.png">
       <!--links for materialize css and jquery in material folder  -->
@@ -31,6 +31,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
 <script type="text/javascript" src="js/materialPreloader.min.js"></script>
 <link rel="stylesheet" type="text/css" href="css/materialPreloader.min.css">
+    <script src="js/owl.carousel.min.js"></script>
+<link rel="stylesheet" href="js/assets/owl.carousel.min.css">
 
 
               <style>
@@ -229,7 +231,7 @@ margin-top:50vh;
 @media (min-width: 320px) and (max-width: 480px) {
 
  #second
- {height:700px !important;}
+ {height:800px !important;}
 
 }
  body
@@ -348,13 +350,142 @@ body
   font-family: 'Montserrat', sans-serif !important;
 
 }
+
+.showbox {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 5%;
+}
+
+.loader1 {
+  display: inline-block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin:auto;
+  width: 100px;
+}
+.loader1:before {
+  content: '';
+  display: block;
+  padding-top: 100%;
+}
+
+.circular {
+  -webkit-animation: rotate 2s linear infinite;
+          animation: rotate 2s linear infinite;
+  height: 100%;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.path {
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  -webkit-animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+          animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+  stroke-linecap: round;
+}
+
+@-webkit-keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35px;
+  }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124px;
+  }
+}
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35px;
+  }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124px;
+  }
+}
+@-webkit-keyframes color {
+  100%,
+  0% {
+    stroke: #d62d20;
+  }
+  40% {
+    stroke: #0057e7;
+  }
+  66% {
+    stroke: #008744;
+  }
+  80%,
+  90% {
+    stroke: #ffa700;
+  }
+}
+@keyframes color {
+  100%,
+  0% {
+    stroke: #d62d20;
+  }
+  40% {
+    stroke: #0057e7;
+  }
+  66% {
+    stroke: #008744;
+  }
+  80%,
+  90% {
+    stroke: #ffa700;
+  }
+}
+
  </style>
 
   </head>
 
 <body oncontextmenu="return false">
 
- <div id="loader"  style="width: 100%;height: 100%;background-color:#d3d3d3;z-index: 9999;position: fixed;text-align: center;padding-top:40vh;" ><div class="md-preloader"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="75" width="75" viewbox="0 0 75 75"><circle cx="37.5" cy="37.5" r="33.5" stroke-width="8"/></svg></div>
+ <div id="loader"  style="width: 100%;height: 100%;background-color:#d3d3d3;z-index: 9999;position: fixed;text-align: center;" ><div class="showbox">
+  <div class="loader1">
+    <svg class="circular" viewBox="25 25 50 50">
+      <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+    </svg>
+  </div>
+</div>
 </div>
 <div class="main">
   <div class="navbar-fixed" >
@@ -407,7 +538,7 @@ body
 </div>
 </div>
 
-<div class=" -grey " id="second" class="section scrollspy" style="height: 400px;text-align: center;padding-top:50px">
+<div class=" -grey " id="second" class="section scrollspy" style="height: 700px;text-align: center;padding-top:50px">
 
  <div class="row" style="" id="aboutus" >
       <div class="col s12 m6">  <i style="font-size:40px" class="material-icons">school</i>
@@ -427,6 +558,18 @@ body
     </div>
 
 
+<div class="owl-carousel">
+<img src="https://scontent-maa2-1.xx.fbcdn.net/v/t1.0-9/10929904_736546383128499_4686020993457574445_n.jpg?_nc_cat=0&oh=9cb2c598830e49d33ce0e1cb019b57d2&oe=5C099C05"> 
+<img src="https://scontent-maa2-1.xx.fbcdn.net/v/t31.0-8/13047707_930914360358366_8609706495560451740_o.jpg?_nc_cat=0&oh=8fb0bf20b25a86fbb3dbbcf994acfadb&oe=5BDE98FC"> 
+<img src="https://scontent-maa2-1.xx.fbcdn.net/v/t1.0-9/11091142_736542663128871_6860168617087804301_n.jpg?_nc_cat=0&oh=cfcf11ad72d26c18aa59b590e3cbb5e4&oe=5BDEB3CE"> 
+<img src="https://scontent-maa2-1.xx.fbcdn.net/v/t1.0-9/11036027_736545066461964_5005372140873644507_n.jpg?_nc_cat=0&oh=17d222fc4e0ec86bb329339c4d9ff8c4&oe=5BCB73DB"> 
+<img src="https://scontent-maa2-1.xx.fbcdn.net/v/t1.0-9/11139993_736543069795497_5265324509167671926_n.jpg?_nc_cat=0&oh=e3130a567e95055cc01441669994b323&oe=5BD6469E"> 
+<img src="https://scontent-maa2-1.xx.fbcdn.net/v/t1.0-9/10523566_732600056856465_8448606910515405768_n.jpg?_nc_cat=0&oh=4f3d4bac3f423d43b03c1968095f90d0&oe=5BC80423"> 
+<img src="https://scontent-maa2-1.xx.fbcdn.net/v/t1.0-9/11082659_732579336858537_3575566916853821866_n.jpg?_nc_cat=0&oh=d0714a2fb9a95563e3c893f2f684d04c&oe=5BCC0C27"> 
+
+<img src="https://scontent-maa2-1.xx.fbcdn.net/v/t1.0-9/1604511_518578094925330_290468423_n.jpg?_nc_cat=0&oh=de8d4250ba41bcedd94d68ce61a2a8f9&oe=5C0B9E93"> 
+
+</div>
 
 </div>
 
@@ -645,11 +788,9 @@ $('#learnmore').click(function(){
         fadeOut: 50
     });
   preloader.on();
-$(document).ready(function() {
-window.onload = function () {
-$('#loader').fadeOut(200, function(){ $('#loader').remove(); } );
-}
-});
+ $(window).bind("load", function () {
+                $('#loader').delay(1600).fadeOut("slow");
+            });
 </script>
 <script>
   var config = {
@@ -718,6 +859,20 @@ $(document).ready(function () {
   gtag('js', new Date());
 
   gtag('config', 'UA-121065692-1');
+</script>
+<script type="text/javascript">
+	$(document).ready(function(){
+var owl = $('.owl-carousel');
+owl.owlCarousel({
+    items:4,
+    loop:true,
+    margin:10,
+    autoplay:true,
+    autoplayTimeout:3000,
+    autoplayHoverPause:true
+});
+
+});
 </script>
 </body>
 </html>
