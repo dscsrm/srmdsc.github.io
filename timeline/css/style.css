@@ -265,6 +265,7 @@ body {
   border-radius: 8px;
   background-color: #fff;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+  max-width : 340px;
 }
 .cards-container section.active {
   height: auto;
@@ -298,5 +299,6 @@ body {
 .cards-container section img {
   width: 100%;
   height: 80%;
+  max-width : 280px;
   max-height : 400px;
 }
