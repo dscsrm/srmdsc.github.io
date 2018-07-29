@@ -3,13 +3,13 @@
 <html>
 	<head>
 		    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-                    <meta name="theme-color" content="#4285F4">
+            <meta name="theme-color" content="#4285F4">
 		    <meta name="msapplication-navbutton-color" content="#4285F4">
 		    <meta name="apple-mobile-web-app-status-bar-style" content="#4285F4">
 		    <meta name="description" content="SRM Developer Students Club (DSC) is a Google Developers program for SRM University students to learn mobile and web development skills.">
 		<title>SRM Developer Students Club - Initiated by Google Developers</title>
 		<meta charset="utf-8"/>
-                <link rel="icon" href="images/dsc3.png">
+        <link rel="icon" href="images/dsc3.png">
       <!--links for materialize css and jquery in material folder  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400" rel="stylesheet">
@@ -727,6 +727,23 @@ body
 	 </div>
 </div>
 </div>
+
+
+<div class="fixed-action-btn">
+  <a class="btn-floating btn-large red">
+    <i class="large material-icons">chat</i>
+  </a>
+  <ul>
+    <li><a class="btn-floating blue" href="http://www.facebook.com/srmdsc " target="_blank"><i class="material-icons">thumb_up</i></a></li>
+    <li><a class="btn-floating red lighten-1" href="http://www.twitter.com/DSC_SRM" target="_blank" ><i class="material-icons">favorite_border</i></a></li>
+    <li><a class="btn-floating brown lighten-1" href="mailto:srmktr_googledsc@srmuniv.edu.in" target="_blank"><i class="material-icons">mail_outline</i></a></li>
+    <li><a class="btn-floating blue darken-2" href="http://www.linkedin.com/company/srm-developer-student-club" target="_blank" ><i class="material-icons">person_add</i></a></li>
+  </ul>
+</div>
+      
+
+
+
 <!--
 <div class="block -orange edge--both">
   <h1>Top & Bottom Angled Edges</h1>
@@ -781,6 +798,20 @@ body
 
 
 <script type="text/javascript">
+ document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.fixed-action-btn');
+    var instances = M.FloatingActionButton.init(elems, options);
+  });
+
+  // Or with jQuery
+
+  $(document).ready(function(){
+    $('.fixed-action-btn').floatingActionButton();
+  });
+        
+
+
+
 $('#learnmore').click(function(){
     $('html, body').animate({
         scrollTop: $( $(this).attr('href') ).offset().top
