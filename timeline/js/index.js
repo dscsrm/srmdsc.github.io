@@ -1,3 +1,6 @@
+/* deprecated file timeline v2 in index.js
+
+
 var PRESTimeline = /** @class */ (function () {
     function PRESTimeline(target, color) {
         // this.__process_stylesheet(document.styleSheets[0]);
@@ -271,3 +274,4 @@ $(document).ready(function () {
     var timeline = new PRESTimeline($('#this-timeline'), colorcode);
 	//periodNext.click();
 });
+*/
