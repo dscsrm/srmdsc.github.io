@@ -297,11 +297,12 @@ function autoTimeline(){
 // ## document load ##
 $(document).ready(function () {
     var colorcode = {
-        'period1': '#fec541',
-        'period2': '#36d484',
+        'period1': '#db3236',
+        'period2': '#f4c20d',
         'period3': '#32ccf4',
-		'period4': '#FF0000',
-		'period5': '#800080'
+	'period4': '#4885ed',
+	'period5': '#3cba54',
+	'period0': '#4885ed'
 		
     };
     var timeline = new PRESTimeline($('#this-timeline'), colorcode);
