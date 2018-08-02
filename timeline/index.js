@@ -300,8 +300,9 @@ $(document).ready(function () {
         'period1': '#fec541',
         'period2': '#36d484',
         'period3': '#32ccf4',
-		'period4': '#FF0000',
-		'period5': '#800080'
+	'period4': '#FF0000',
+	'period5': '#800080',
+	'period0': '#4885ed'
 		
     };
     var timeline = new PRESTimeline($('#this-timeline'), colorcode);
