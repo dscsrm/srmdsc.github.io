@@ -707,13 +707,12 @@ body
 
 
 
-
-
 <div class=" --both " id="events" style="margin-left: 5%">
 <iframe  scrolling="no" frameBorder="0" src="timeline/index.html" style="overflow:hidden; @media (max-width: 850px) {margin-right: 20%;
 }}" width="95%"; height="880px" ">
 </iframe>
 </div>
+
 
 
 
@@ -780,6 +779,14 @@ body
 </div>
       
 
+<div class="parallax-container">
+      <div class="parallax">
+	  <img src="https://scontent.fmaa3-1.fna.fbcdn.net/v/t31.0-8/28618940_1638457139576698_7820606673357021998_o.jpg?_nc_cat=0&oh=937ca1fb2948eccd7f2614f5987e3eb0&oe=5BCCB6E9">
+
+	  </div>
+</div>
+
+
 
 
 <!--
@@ -837,6 +844,9 @@ body
 
 <script type="text/javascript">
 
+  $(document).ready(function(){
+    $('.parallax').parallax();
+  });
 
 $(document).ready(function(){
     $('.slider').slider({ indicators : false, height : 450});
