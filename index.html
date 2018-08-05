@@ -15,7 +15,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400" rel="stylesheet">
-
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+       
 <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
 <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -721,27 +722,27 @@ body
  <div class="row">
  	<form id="myform"> 
 
-	<div class="col s12 m7">
+	<div class="col s12 m4">
 		<div class="card">
 		<div class="card-content" id="contact">
 		<div class="card-title black-text">CONTACT US</div>
       <div class="row">
-        <div class="input-field col m6 s12">
+        <div class="input-field col s12">
           <i class="material-icons prefix active">account_circle</i>
           <input id="name" type="text" required class="validate">
           <label for="name">Name</label>
         </div>
-        <div class="input-field col m6 s12">
+        <div class="input-field col s12">
           <i class="material-icons prefix active">phone</i>
           <input id="phone" type="number"  required class="validate">
           <label for="phone">Phone</label>
         </div>
-				<div class="input-field  col m8 s12">
+				<div class="input-field  col s12">
 				   <i class="material-icons prefix active">mail</i>
 				   <input id="email" type="email" required class="validate">
 			     <label for="email">Email</label>
 				</div>
-				<div class="input-field col m8 s12">
+				<div class="input-field col s12">
           <i class="material-icons prefix active">mode_edit</i>
 					<textarea id="message" required class="materialize-textarea"></textarea>
           <label for="message">Message</label>
@@ -757,27 +758,16 @@ body
      </div>
   </div>
 </form>
-   <div class="offset-m1 col m4 s12">
-     
-	 <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fsrmdsc&tabs=timeline&width=340&height=440px&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId=221445641825006" width="100%" height="440px" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
-
+   <div class="offset-m1 col m3 s12">
+     <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fsrmdsc&tabs=timeline&width=300&height=525&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId=221445641825006" width="100%" height="525" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
 	 </div>
-</div>
+
+     <div class="offset-m1 col m3 hide-on-small-only">
+       <a class="twitter-timeline"  data-chrome="nofooter"  data-lang="en" data-width="100%" data-height="525" href="https://twitter.com/DSC_SRM?ref_src=twsrc%5Etfw">Tweets by DSC_SRM</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+	 </div>
+ </div>
 </div>
 
-
-<div class="fixed-action-btn hide-on-small-only">
-  <a class="btn-floating btn-large red">
-    <i class="large material-icons">chat</i>
-  </a>
-  <ul>
-    <li><a class="btn-floating blue" href="http://www.facebook.com/srmdsc " target="_blank"><i class="material-icons">thumb_up</i></a></li>
-    <li><a class="btn-floating red lighten-1" href="http://www.twitter.com/DSC_SRM" target="_blank" ><i class="material-icons">favorite_border</i></a></li>
-    <li><a class="btn-floating brown lighten-1" href="mailto:srmktr_googledsc@srmuniv.edu.in" target="_blank"><i class="material-icons">mail_outline</i></a></li>
-    <li><a class="btn-floating blue darken-2" href="http://www.linkedin.com/company/srm-developer-student-club" target="_blank" ><i class="material-icons">person_add</i></a></li>
-  </ul>
-</div>
-      
 
 <div class="parallax-container hide-on-small-only">
       <div class="parallax">
@@ -786,6 +776,19 @@ body
 	  </div>
 </div>
 
+ <!-- Add FIXED ACTION BUTTON -->
+
+        <div class="fixed-action-btn vertical hide-on-small-only">
+            <a class="btn-floating btn-large red">
+                <i class="material-icons">chat</i>
+            </a>
+            <ul>
+                <li><a class="btn-floating  blue darken-4" target="_blank" href="https://www.facebook.com/srmdsc"><i class="fa fa-facebook"></i></a></li>
+                <li><a class="btn-floating cyan lighten-1" target="_blank" href="https://twitter.com/DSC_SRM"><i class="fa fa-twitter"></i></a></li>
+                <li><a class="btn-floating red darken-3" target="_blank" href="https://www.youtube.com/channel/UChyXR37pLcnvwE4nHmOXxMQ"> <i class="fa fa-youtube"></i></a></li>
+                <li><a target="_blank" href="https://www.linkedin.com/company/srm-developer-student-club" class="btn-floating blue lighten-1"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+        </div>
 
 
 
